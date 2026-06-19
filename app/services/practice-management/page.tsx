@@ -102,11 +102,11 @@ export default function PracticeManagementPage() {
               <HeroTextItem>
                 <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05]">
                   Your Practice Metrics
-                  <br />
+                  <br className="hidden sm:block" />
                   Are Telling a Story.
-                  <br />
+                  <br className="hidden sm:block" />
                   <span className="text-navy/40">Let&rsquo;s Find Out
-                  <br />What It Says.</span>
+                  <br className="hidden sm:block" />What It Says.</span>
                 </h1>
               </HeroTextItem>
               <HeroTextItem>
@@ -226,7 +226,7 @@ export default function PracticeManagementPage() {
             <AnimatedItem>
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Ready to See What&rsquo;s
-                <br />
+                <br className="hidden sm:block" />
                 Actually Holding You Back?
               </h2>
             </AnimatedItem>

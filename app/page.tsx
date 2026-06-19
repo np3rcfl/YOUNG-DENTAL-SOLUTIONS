@@ -8,7 +8,6 @@ import {
   Handshake,
   ArrowRight,
   CaretDown,
-  CheckCircle,
 } from "@phosphor-icons/react/dist/ssr";
 import { HeroText, HeroTextItem, HeroImage } from "@/components/HomeAnimations";
 import { AnimatedContainer, AnimatedItem } from "@/components/AnimatedSection";
@@ -147,14 +146,6 @@ const differentiators = [
   },
 ];
 
-const cities = [
-  "San Diego",
-  "Rancho Bernardo",
-  "Beverly Hills",
-  "Santa Clarita",
-  "Los Angeles",
-  "Orange County",
-];
 
 export default function HomePage() {
   return (
@@ -167,7 +158,7 @@ export default function HomePage() {
       {/* ─── HERO ─── */}
       <section
         className="min-h-[100dvh] flex items-center pt-24 pb-14 overflow-hidden"
-        style={{ background: "radial-gradient(ellipse at 75% 15%, #221D35 0%, #1A1A26 45%, #111019 100%)" }}
+        style={{ background: "radial-gradient(ellipse at 75% 15%, #0E1C10 0%, #151210 45%, #0A0D0A 100%)" }}
       >
         <div className="max-w-[1200px] mx-auto px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] gap-8 xl:gap-14 items-center">
@@ -186,11 +177,8 @@ export default function HomePage() {
                   <br />
                   One Coach.
                   <br />
-                  <em className="text-gold" style={{ fontStyle: "italic" }}>
-                    Your Practice,
-                  </em>{" "}
+                  Your Practice,{" "}
                   Finally Running
-                  <br />
                   Like a Business.
                 </h1>
               </HeroTextItem>
@@ -205,7 +193,6 @@ export default function HomePage() {
 
               <HeroTextItem>
                 <div className="flex flex-col sm:flex-row gap-3">
-                  {/* Primary CTA — button-in-button architecture */}
                   <Link
                     href="/contact"
                     className="group inline-flex items-center justify-between gap-6 px-5 py-3.5 bg-bg text-navy rounded-full font-body font-medium text-sm hover:bg-bg/96 active:scale-[0.98] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
@@ -215,7 +202,6 @@ export default function HomePage() {
                       <ArrowRight size={13} weight="bold" />
                     </span>
                   </Link>
-                  {/* Ghost CTA */}
                   <Link
                     href="/services"
                     className="inline-flex items-center justify-center px-5 py-3.5 rounded-full border border-bg/20 text-bg font-body font-medium text-sm hover:border-bg/45 hover:bg-bg/6 transition-all duration-300"
@@ -224,82 +210,58 @@ export default function HomePage() {
                   </Link>
                 </div>
               </HeroTextItem>
+
+              <HeroTextItem>
+                <div className="pt-5 border-t border-bg/10">
+                  <div className="flex gap-8">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-bg/35 font-body">Production efficiency</p>
+                      <p className="text-sm font-medium text-bg/70 font-body tabular-nums mt-0.5">measured</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-bg/35 font-body">Overhead ratio</p>
+                      <p className="text-sm font-medium text-bg/70 font-body tabular-nums mt-0.5">benchmarked</p>
+                    </div>
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-bg/35 font-body">Staff retention</p>
+                      <p className="text-sm font-medium text-bg/70 font-body tabular-nums mt-0.5">tracked</p>
+                    </div>
+                  </div>
+                </div>
+              </HeroTextItem>
             </HeroText>
 
-            {/* Right: Photo with Z-axis depth */}
+            {/* Right: Portrait */}
             <HeroImage>
               <div className="relative mt-6 lg:mt-0">
-                {/* Outer double-bezel frame, slightly rotated */}
-                <div
-                  className="relative rounded-[2rem] p-2 bg-bg/5 border border-bg/10"
-                  style={{ transform: "rotate(-1.5deg)" }}
-                >
-                  <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[3/4]">
+                <div className="relative rounded-2xl overflow-hidden aspect-[3/4] border border-gold/25">
+                  <Image
+                    src="/images/arlene-headshot.jpg"
+                    alt="Arlene Young, Dental Practice Consultant serving San Diego and Southern California"
+                    fill
+                    className="object-cover object-top"
+                    priority
+                    sizes="(max-width: 1024px) 90vw, 44vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
+                  <div className="absolute top-5 left-5">
                     <Image
-                      src="/images/arlene-headshot.jpg"
-                      alt="Arlene Young, Dental Practice Consultant serving San Diego and Southern California"
-                      fill
-                      className="object-cover object-top"
-                      priority
-                      sizes="(max-width: 1024px) 90vw, 44vw"
+                      src="/images/arlene-young.png"
+                      alt="Arlene Young Dental Consultant logo"
+                      width={112}
+                      height={75}
+                      className="object-contain"
+                      style={{ filter: "invert(1) brightness(10)" }}
                     />
-                    {/* Gradient overlay for text legibility */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
-                    {/* Logo top-left overlay — inverted white on photo */}
-                    <div className="absolute top-5 left-5">
-                      <div className="relative w-28 h-auto">
-                        <Image
-                          src="/images/arlene-young.png"
-                          alt="Arlene Young Dental Consultant logo"
-                          width={112}
-                          height={75}
-                          className="object-contain"
-                          style={{ filter: "invert(1) brightness(10)" }}
-                        />
-                      </div>
-                    </div>
-                    {/* Inner image caption */}
-                    <div className="absolute bottom-6 left-6">
-                      <p className="font-display text-bg/90 text-sm font-light italic">
-                        Arlene Young
-                      </p>
-                      <p className="text-bg/50 text-xs font-body mt-0.5">
-                        Founder, Young Dental Solutions
-                      </p>
-                    </div>
                   </div>
-                </div>
-
-                {/* Floating stat card — bottom left */}
-                <div
-                  className="absolute bottom-10 -left-5 rounded-2xl bg-bg/95 backdrop-blur-sm border border-navy/8 shadow-2xl shadow-navy/15 p-0.5"
-                  style={{ transform: "rotate(1.5deg)" }}
-                >
-                  <div className="rounded-[calc(1rem-0.125rem)] bg-bg px-5 py-4 border border-navy/5">
-                    <p className="font-display text-3xl font-semibold text-navy leading-none">
-                      30+
+                  <div className="absolute bottom-6 left-6">
+                    <p className="font-display text-bg/90 text-sm font-light italic">
+                      Arlene Young
                     </p>
-                    <p className="text-[11px] text-navy/45 font-body mt-1 tracking-wide">
-                      Years in Dental Industry
+                    <p className="text-bg/50 text-xs font-body mt-0.5">
+                      Founder, Young Dental Solutions
                     </p>
                   </div>
-                </div>
-
-                {/* Floating location card — top right */}
-                <div
-                  className="absolute -top-3 -right-3 rounded-xl backdrop-blur-sm shadow-xl px-4 py-3 border"
-                  style={{
-                    transform: "rotate(1.5deg)",
-                    background: "rgba(253,252,247,0.96)",
-                    borderColor: "rgba(26,26,38,0.12)",
-                  }}
-                >
-                  <p className="text-[10px] text-navy/45 font-body uppercase tracking-wider">
-                    Service Area
-                  </p>
-                  <p className="text-xs text-navy/80 font-body font-medium mt-0.5">
-                    Southern California
-                  </p>
                 </div>
               </div>
             </HeroImage>
@@ -308,7 +270,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── TRUST BAR ─── */}
-      <section className="py-12" style={{ background: "linear-gradient(180deg, #E8E3D8 0%, #EDE9DF 100%)" }}>
+      <section className="py-10 bg-bg border-y border-navy/8">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-3 divide-x divide-navy/10">
             {[
@@ -317,10 +279,10 @@ export default function HomePage() {
               { stat: "SoCal", label: "Wide Regional Coverage" },
             ].map(({ stat, label }) => (
               <AnimatedItem key={stat} className="px-6 py-4 text-center">
-                <p className="font-display text-3xl lg:text-4xl font-semibold text-navy">
+                <p className="font-display text-3xl lg:text-4xl font-semibold text-navy tabular-nums">
                   {stat}
                 </p>
-                <p className="text-navy/45 text-xs mt-1.5 font-body tracking-wide">
+                <p className="text-navy/40 text-[11px] mt-1.5 font-body tracking-widest uppercase">
                   {label}
                 </p>
               </AnimatedItem>
@@ -330,26 +292,18 @@ export default function HomePage() {
       </section>
 
       {/* ─── EDITORIAL PULL QUOTE ─── */}
-      <section className="py-24 overflow-hidden" style={{ background: "linear-gradient(160deg, #F4F0E6 0%, #FDFCF7 100%)" }}>
-        <div className="max-w-6xl mx-auto px-6">
+      <section className="py-24" style={{ background: "#151210" }}>
+        <div className="max-w-4xl mx-auto px-6">
           <AnimatedContainer>
             <AnimatedItem>
-              <blockquote className="relative">
-                <span
-                  className="absolute -top-10 -left-6 font-display leading-none select-none pointer-events-none"
-                  aria-hidden="true"
-                  style={{ fontSize: "14rem", color: "rgba(26,26,38,0.055)", lineHeight: 1 }}
-                >
-                  &ldquo;
-                </span>
-                <p className="font-display text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] font-light text-navy leading-[1.18] italic max-w-4xl relative z-10 tracking-[-0.01em]">
-                  Most consultants send a playbook and move on.
-                  I stay until the practice actually changes.
+              <blockquote>
+                <p className="font-display text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] font-light text-bg leading-[1.18] tracking-[-0.01em]">
+                  &ldquo;Most consultants send a playbook and move on.
+                  I stay until the practice actually changes.&rdquo;
                 </p>
-                <footer className="mt-8 flex items-center gap-4">
-                  <div className="w-10 h-px bg-gold" />
-                  <p className="font-body text-sm text-navy/55 tracking-wide">
-                    Arlene Young &mdash; Founder, Young Dental Solutions
+                <footer className="mt-8">
+                  <p className="font-body text-sm text-bg/35 tracking-wide">
+                    &mdash; Arlene Young, Young Dental Solutions
                   </p>
                 </footer>
               </blockquote>
@@ -359,17 +313,14 @@ export default function HomePage() {
       </section>
 
       {/* ─── ABOUT PREVIEW ─── */}
-      <section className="py-32" style={{ background: "linear-gradient(155deg, #FDFCF7 0%, #F4F0E6 55%, #EDE9DF 100%)" }}>
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section className="py-32" style={{ background: "linear-gradient(155deg, #FAFAF8 0%, #F0EAE0 55%, #EBE5D8 100%)" }}>
+        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <AnimatedContainer>
             <AnimatedItem className="space-y-7">
-              <span className="eyebrow">Why Arlene</span>
               <h2 className="font-display text-4xl lg:text-5xl xl:text-[3.25rem] font-light text-navy leading-[1.05]">
                 A Finance Background
-                <br />
-                <em style={{ fontStyle: "italic" }} className="text-gold">
-                  Changes Everything.
-                </em>
+                <br className="hidden sm:block" />
+                Changes Everything.
               </h2>
               <p className="text-navy/58 leading-relaxed font-body">
                 Most dental consultants come from clinical backgrounds. Arlene
@@ -398,28 +349,21 @@ export default function HomePage() {
           </AnimatedContainer>
 
           <AnimatedContainer delay={0.08}>
-            {[
-              "Finance-first analysis, not clinical assumption",
-              "1-on-1 coaching, not group programs or playbooks",
-              "30+ years of Southern California dental industry knowledge",
-              "Real accountability — she picks up the phone",
-            ].map((text) => (
-              <AnimatedItem key={text} className="mb-3.5">
-                {/* Double-bezel card */}
-                <div className="rounded-2xl bg-cream border border-navy/8 p-1">
-                  <div className="rounded-[calc(1rem-0.25rem)] bg-bg border border-navy/5 px-5 py-4 flex items-start gap-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
-                    <CheckCircle
-                      size={18}
-                      weight="fill"
-                      className="text-gold mt-0.5 shrink-0"
-                    />
-                    <p className="text-navy/68 font-body text-sm leading-relaxed">
-                      {text}
-                    </p>
+            <AnimatedItem className="space-y-5">
+              {[
+                { label: "Approach", text: "Finance-first analysis of your practice — scheduling, billing, overhead, and team dynamics read as one system, not separate problems." },
+                { label: "Format", text: "1-on-1 coaching only. No group programs, no associates handling your account, no playbooks designed for someone else's practice." },
+                { label: "Experience", text: "30+ years working across every practice type and size in Southern California, with a track record of practices that actually change." },
+                { label: "Accountability", text: "She picks up the phone. She follows through. She doesn't call once and disappear." },
+              ].map(({ label, text }) => (
+                <AnimatedItem key={label}>
+                  <div className="border-b border-navy/10 pb-5">
+                    <p className="text-[10px] uppercase tracking-widest text-gold font-body mb-1.5">{label}</p>
+                    <p className="text-navy/65 font-body text-sm leading-relaxed">{text}</p>
                   </div>
-                </div>
-              </AnimatedItem>
-            ))}
+                </AnimatedItem>
+              ))}
+            </AnimatedItem>
           </AnimatedContainer>
         </div>
       </section>
@@ -428,20 +372,15 @@ export default function HomePage() {
       <section
         className="py-32"
         id="services"
-        style={{ background: "radial-gradient(ellipse at 20% 80%, #221D35 0%, #1A1A26 50%, #111019 100%)" }}
+        style={{ background: "radial-gradient(ellipse at 20% 80%, #0E1C10 0%, #151210 50%, #0A0D0A 100%)" }}
       >
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="mb-14 space-y-4">
             <AnimatedItem>
-              <span className="eyebrow eyebrow-light">Services</span>
-            </AnimatedItem>
-            <AnimatedItem>
               <h2 className="font-display text-4xl lg:text-5xl xl:text-[3.5rem] font-light text-bg leading-[1.05]">
                 Four Ways We Grow
-                <br />
-                <em style={{ fontStyle: "italic" }} className="text-gold">
-                  Your Practice
-                </em>
+                <br className="hidden sm:block" />
+                Your Practice
               </h2>
             </AnimatedItem>
           </AnimatedContainer>
@@ -605,17 +544,15 @@ export default function HomePage() {
       </section>
 
       {/* ─── COUNTER-POSITIONING ─── */}
-      <section className="py-32" style={{ background: "linear-gradient(160deg, #FDFCF7 0%, #F6F2EA 100%)" }}>
+      <section className="py-32 relative overflow-hidden" style={{ background: "linear-gradient(160deg, #FAFAF8 0%, #F2EDE4 100%)" }}>
+        <span className="absolute -top-8 -right-4 font-display font-light text-navy/5 select-none pointer-events-none leading-none" aria-hidden="true" style={{ fontSize: "14rem" }}>02</span>
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <AnimatedItem className="space-y-7">
-              <span className="eyebrow">The Difference</span>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-navy leading-[1.05]">
                 You&rsquo;ve Tried Consultants.
-                <br />
-                <em style={{ fontStyle: "italic" }} className="text-gold">
-                  Try One Who Shows Up.
-                </em>
+                <br className="hidden sm:block" />
+                Try One Who Shows Up.
               </h2>
               <p className="text-navy/55 leading-relaxed font-body">
                 Dentists who&rsquo;ve worked with consultants before come to Arlene
@@ -639,7 +576,7 @@ export default function HomePage() {
                   <div
                     key={us}
                     className="rounded-2xl border border-navy/8 p-px overflow-hidden"
-                    style={{ background: "linear-gradient(160deg, #F4F0E6 0%, #FDFCF7 100%)" }}
+                    style={{ background: "linear-gradient(160deg, #F0EAE0 0%, #FAFAF8 100%)" }}
                   >
                     <div className="rounded-[calc(1rem-0.0625rem)] bg-bg/70 grid grid-cols-2 divide-x divide-navy/8">
                       <p className="text-sm text-navy/30 leading-relaxed font-body p-5 pr-4 line-through decoration-navy/15">
@@ -658,12 +595,9 @@ export default function HomePage() {
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="py-32" style={{ background: "linear-gradient(170deg, #E8E3D8 0%, #EDE9DF 50%, #E4DFD4 100%)" }}>
+      <section className="py-32" style={{ background: "linear-gradient(170deg, #E2DDD0 0%, #EBE5D8 50%, #DDD8CC 100%)" }}>
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-14 space-y-4">
-            <AnimatedItem>
-              <span className="eyebrow">Process</span>
-            </AnimatedItem>
             <AnimatedItem>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">
                 How It Works
@@ -671,21 +605,15 @@ export default function HomePage() {
             </AnimatedItem>
           </AnimatedContainer>
 
-          <AnimatedContainer className="relative">
-            {/* Connecting line */}
-            <div className="absolute left-7 top-8 bottom-8 w-px bg-navy/10 hidden sm:block" aria-hidden="true" />
-            <div className="space-y-3">
+          <AnimatedContainer>
+            <div className="space-y-0">
             {steps.map(({ num, title, desc }) => (
               <AnimatedItem key={num}>
-                <div className="relative flex gap-6 items-start px-0 py-2">
-                  {/* Step number bubble */}
-                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-bg border border-navy/12 flex items-center justify-center shadow-sm">
-                    <span className="font-display text-lg font-medium text-navy/50 leading-none">
-                      {num}
-                    </span>
-                  </div>
-                  {/* Content */}
-                  <div className="flex-1 pt-3.5 pb-6 space-y-2 border-b border-navy/8 last:border-0">
+                <div className="flex gap-8 items-start py-6 border-b border-navy/10 last:border-0">
+                  <span className="font-display text-4xl font-light text-navy/18 shrink-0 leading-none tabular-nums mt-1">
+                    {num}
+                  </span>
+                  <div className="space-y-1.5">
                     <h3 className="font-display text-xl font-medium text-navy">
                       {title}
                     </h3>
@@ -702,12 +630,9 @@ export default function HomePage() {
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-32" id="faq" style={{ background: "linear-gradient(180deg, #F8F5ED 0%, #FDFCF7 100%)" }}>
+      <section className="py-32" id="faq" style={{ background: "linear-gradient(180deg, #F5F0E8 0%, #FAFAF8 100%)" }}>
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-14 space-y-4">
-            <AnimatedItem>
-              <span className="eyebrow">FAQ</span>
-            </AnimatedItem>
             <AnimatedItem>
               <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">
                 Common Questions
@@ -719,11 +644,14 @@ export default function HomePage() {
             {faqs.map(({ q, a }) => (
               <AnimatedItem key={q}>
                 <details className="group rounded-2xl bg-cream border border-navy/8 overflow-hidden">
-                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer font-display font-medium text-navy text-lg list-none select-none hover:bg-navy/3 transition-colors duration-200">
-                    {q}
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer list-none select-none hover:bg-navy/3 transition-colors duration-200">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-navy/30 font-body mb-1">Q.</p>
+                      <p className="font-display font-medium text-navy text-lg">{q}</p>
+                    </div>
                     <CaretDown
                       size={18}
-                      className="shrink-0 text-navy/30 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-open:rotate-180"
+                      className="shrink-0 text-navy/30 ml-4 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-open:rotate-180"
                     />
                   </summary>
                   <p className="px-6 pb-6 text-navy/58 leading-relaxed border-t border-navy/6 pt-4 font-body text-sm">
@@ -737,32 +665,27 @@ export default function HomePage() {
       </section>
 
       {/* ─── SERVICE AREAS ─── */}
-      <section className="py-20" style={{ background: "linear-gradient(135deg, #E4DFD4 0%, #EDE9DF 100%)" }}>
+      <section className="py-20" style={{ background: "linear-gradient(135deg, #DDD8CC 0%, #EBE5D8 100%)" }}>
         <div className="max-w-5xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <AnimatedItem className="space-y-4">
-              <span className="eyebrow">Service Areas</span>
               <h2 className="font-display text-3xl lg:text-4xl font-light text-navy leading-[1.05]">
-                Serving Southern
-                <br />
-                <em style={{ fontStyle: "italic" }} className="text-gold">California</em>
+                Serving Southern California
               </h2>
               <p className="text-navy/55 font-body text-sm leading-relaxed">
-                On-site or remote engagements across San Diego County, LA, and beyond.
+                On-site and remote engagements across San Diego, Rancho Bernardo, Beverly Hills, Santa Clarita, Los Angeles, Orange County, and all of Southern California.
               </p>
             </AnimatedItem>
             <AnimatedItem>
-              <div className="flex flex-wrap gap-2">
-                {cities.map((city) => (
-                  <span
-                    key={city}
-                    className="px-4 py-2.5 rounded-xl border border-navy/12 text-navy/60 text-xs font-body tracking-wide font-medium"
-                    style={{ background: "rgba(253,252,247,0.7)" }}
-                  >
-                    {city}
-                  </span>
-                ))}
-              </div>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-between gap-8 px-6 py-4 bg-navy text-bg rounded-full font-body font-medium text-sm hover:bg-navy/85 active:scale-[0.98] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+              >
+                Schedule Free Consultation
+                <span className="w-8 h-8 rounded-full bg-bg/10 flex items-center justify-center transition-all duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-110">
+                  <ArrowRight size={13} weight="bold" />
+                </span>
+              </Link>
             </AnimatedItem>
           </AnimatedContainer>
         </div>

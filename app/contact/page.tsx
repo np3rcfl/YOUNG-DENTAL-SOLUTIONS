@@ -61,7 +61,7 @@ export default function ContactPage() {
                 </p>
                 <h1 className="font-display text-5xl lg:text-6xl font-semibold text-navy leading-[1.1]">
                   Let&rsquo;s Talk About
-                  <br />
+                  <br className="hidden sm:block" />
                   <span className="text-navy/40">Your Practice.</span>
                 </h1>
                 <p className="text-lg text-navy/70 leading-relaxed">

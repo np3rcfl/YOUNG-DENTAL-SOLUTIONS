@@ -177,7 +177,7 @@ export default function ServicesPage() {
             <HeroTextItem>
               <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg">
                 Four Ways We
-                <br />
+                <br className="hidden sm:block" />
                 Grow Your Practice
               </h1>
             </HeroTextItem>
@@ -243,7 +243,7 @@ export default function ServicesPage() {
             <AnimatedItem>
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Not Sure Which Service
-                <br />
+                <br className="hidden sm:block" />
                 Is Right for Your Practice?
               </h2>
             </AnimatedItem>

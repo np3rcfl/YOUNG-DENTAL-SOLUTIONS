@@ -101,9 +101,9 @@ export default function CoachingPage() {
               <HeroTextItem>
                 <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05]">
                   Clarity on Your Numbers.
-                  <br />
+                  <br className="hidden sm:block" />
                   <span className="text-navy/40">Confidence in
-                  <br />Your Decisions.</span>
+                  <br className="hidden sm:block" />Your Decisions.</span>
                 </h1>
               </HeroTextItem>
               <HeroTextItem>
@@ -243,7 +243,7 @@ export default function CoachingPage() {
             <AnimatedItem>
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Ready to Stop Flying Blind?
-                <br />
+                <br className="hidden sm:block" />
                 Let&rsquo;s Talk.
               </h2>
             </AnimatedItem>

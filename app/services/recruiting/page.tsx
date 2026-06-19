@@ -96,9 +96,9 @@ export default function RecruitingPage() {
             <HeroTextItem>
               <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05] max-w-3xl">
                 The Right Team Is the Difference
-                <br />
+                <br className="hidden sm:block" />
                 Between a Practice That Runs
-                <br />
+                <br className="hidden sm:block" />
                 <span className="text-navy/40">and One That Drains You.</span>
               </h1>
             </HeroTextItem>
@@ -220,7 +220,7 @@ export default function RecruitingPage() {
             <AnimatedItem>
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Need to Build a Stronger Team?
-                <br />
+                <br className="hidden sm:block" />
                 Let&rsquo;s Talk.
               </h2>
             </AnimatedItem>

@@ -14,19 +14,16 @@ export default function Footer() {
       {/* Editorial CTA band */}
       <div
         className="py-24 px-6"
-        style={{ background: "radial-gradient(ellipse at 50% 0%, #221D35 0%, #1A1A26 55%, #111019 100%)" }}
+        style={{ background: "radial-gradient(ellipse at 50% 0%, #0E1C10 0%, #151210 55%, #0A0D0A 100%)" }}
       >
         <div className="max-w-6xl mx-auto">
           <div className="rounded-[2.5rem] bg-bg/4 border border-bg/8 p-2">
             <div className="rounded-[calc(2.5rem-0.5rem)] bg-bg/4 border border-bg/6 px-10 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
               <div className="space-y-4 max-w-xl">
-                <p className="eyebrow eyebrow-light">Start the Conversation</p>
                 <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-light text-bg leading-[1.05]">
                   Ready to Stop Guessing
-                  <br />
-                  <em className="text-gold" style={{ fontStyle: "italic" }}>
-                    and Start Growing?
-                  </em>
+                  <br className="hidden sm:block" />
+                  and Start Growing?
                 </h2>
                 <p className="text-bg/50 font-body text-base leading-relaxed">
                   30 minutes. No pitch. Just an honest look at your practice
@@ -53,7 +50,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer grid */}
-      <div style={{ background: "linear-gradient(180deg, #EDE9DF 0%, #E8E3D8 100%)" }}>
+      <div style={{ background: "linear-gradient(180deg, #EBE5D8 0%, #E2DDD0 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="space-y-5">
             <p className="font-display text-navy font-semibold text-xl tracking-tight">

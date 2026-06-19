@@ -105,13 +105,11 @@ export default function AboutPage() {
               <HeroTextItem>
                 <h1 className="font-display text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem] xl:text-[5.25rem] font-light text-bg leading-[0.98] tracking-[-0.02em]">
                   30 Years.
-                  <br />
+                  <br className="hidden sm:block" />
                   No Templates.
-                  <br />
-                  <em className="text-gold" style={{ fontStyle: "italic" }}>
-                    One Practice
-                  </em>
-                  <br />
+                  <br className="hidden sm:block" />
+                  One Practice
+                  <br className="hidden sm:block" />
                   at a Time.
                 </h1>
               </HeroTextItem>
@@ -193,10 +191,8 @@ export default function AboutPage() {
             <AnimatedItem>
               <h2 className="font-display text-3xl lg:text-4xl font-light text-navy mb-10 leading-[1.1]">
                 A Finance Background That Changes
-                <br />
-                <em style={{ fontStyle: "italic" }} className="text-gold">
-                  How You See Your Numbers
-                </em>
+                <br className="hidden sm:block" />
+                How You See Your Numbers
               </h2>
             </AnimatedItem>
             <AnimatedItem className="space-y-6 text-navy/58 leading-relaxed font-body">

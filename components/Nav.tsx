@@ -75,8 +75,8 @@ export default function Nav() {
         <nav
           className={`flex items-center justify-between px-5 py-3 rounded-full transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] ${
             scrolled
-              ? "bg-[#1A1A26]/98 backdrop-blur-xl shadow-2xl shadow-[#1A1A26]/25"
-              : "bg-[#1A1A26]/88 backdrop-blur-md"
+              ? "bg-[#151210]/98 backdrop-blur-xl shadow-2xl shadow-[#151210]/25"
+              : "bg-[#151210]/88 backdrop-blur-md"
           }`}
         >
           <Link
@@ -100,8 +100,8 @@ export default function Nav() {
                   href={href}
                   className={`text-sm font-body font-medium transition-colors duration-300 ${
                     pathname === href
-                      ? "text-[#FDFCF7]"
-                      : "text-[#FDFCF7]/55 hover:text-[#FDFCF7]"
+                      ? "text-[#FAFAF8]"
+                      : "text-[#FAFAF8]/55 hover:text-[#FAFAF8]"
                   }`}
                 >
                   {label}
@@ -112,14 +112,14 @@ export default function Nav() {
 
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center px-5 py-2 rounded-full border border-[#FDFCF7]/20 text-[#FDFCF7] text-sm font-medium font-body hover:border-[#FDFCF7]/50 hover:bg-[#FDFCF7]/8 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
+            className="hidden md:inline-flex items-center px-5 py-2 rounded-full border border-[#FAFAF8]/20 text-[#FAFAF8] text-sm font-medium font-body hover:border-[#FAFAF8]/50 hover:bg-[#FAFAF8]/8 transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)]"
           >
             Free Consultation
           </Link>
 
           <button
             onClick={() => setOpen(!open)}
-            className="md:hidden text-[#FDFCF7] p-2 -mr-1"
+            className="md:hidden text-[#FAFAF8] p-2 -mr-1"
             aria-label={open ? "Close menu" : "Open menu"}
           >
             <HamburgerIcon open={open} />
@@ -134,7 +134,7 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="fixed inset-0 z-[60] bg-[#1A1A26]/97 backdrop-blur-3xl flex flex-col"
+            className="fixed inset-0 z-[60] bg-[#151210]/97 backdrop-blur-3xl flex flex-col"
           >
             <div className="flex items-center justify-between px-6 py-5 mt-1">
               <Link href="/" className="flex items-center hover:opacity-80 transition-opacity duration-300">
@@ -149,7 +149,7 @@ export default function Nav() {
               </Link>
               <button
                 onClick={() => setOpen(false)}
-                className="text-[#FDFCF7] p-2 -mr-1"
+                className="text-[#FAFAF8] p-2 -mr-1"
                 aria-label="Close menu"
               >
                 <HamburgerIcon open={true} />
@@ -172,8 +172,8 @@ export default function Nav() {
                     href={href}
                     className={`block font-display text-5xl font-light py-3 transition-colors duration-300 ${
                       pathname === href
-                        ? "text-[#FDFCF7]"
-                        : "text-[#FDFCF7]/45 hover:text-[#FDFCF7]"
+                        ? "text-[#FAFAF8]"
+                        : "text-[#FAFAF8]/45 hover:text-[#FAFAF8]"
                     }`}
                   >
                     {label}
@@ -191,16 +191,16 @@ export default function Nav() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="inline-flex items-center justify-between w-full px-6 py-4 rounded-full border border-[#FDFCF7]/20 text-[#FDFCF7] font-body font-medium text-base hover:border-[#FDFCF7]/40 hover:bg-[#FDFCF7]/6 transition-all duration-300"
+                className="inline-flex items-center justify-between w-full px-6 py-4 rounded-full border border-[#FAFAF8]/20 text-[#FAFAF8] font-body font-medium text-base hover:border-[#FAFAF8]/40 hover:bg-[#FAFAF8]/6 transition-all duration-300"
               >
                 Schedule Free Consultation
-                <span className="w-8 h-8 rounded-full border border-[#FDFCF7]/15 flex items-center justify-center">
+                <span className="w-8 h-8 rounded-full border border-[#FAFAF8]/15 flex items-center justify-center">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                     <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </span>
               </Link>
-              <p className="text-sm text-[#FDFCF7]/30 font-body">
+              <p className="text-sm text-[#FAFAF8]/30 font-body">
                 858-223-9714 &middot; arlene@youngdentalsolutions.com
               </p>
             </motion.div>

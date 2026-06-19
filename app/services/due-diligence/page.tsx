@@ -105,7 +105,7 @@ export default function DueDiligencePage() {
             <HeroTextItem>
               <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05] max-w-3xl">
                 Before You Sign on a Practice,
-                <br />
+                <br className="hidden sm:block" />
                 <span className="text-navy/40">Know What You&rsquo;re Actually Buying.</span>
               </h1>
             </HeroTextItem>
@@ -143,7 +143,7 @@ export default function DueDiligencePage() {
             <AnimatedItem>
               <h2 className="font-display text-4xl font-semibold text-navy">
                 Every Area That Matters.
-                <br />
+                <br className="hidden sm:block" />
                 Nothing That Doesn&rsquo;t.
               </h2>
             </AnimatedItem>
@@ -238,7 +238,7 @@ export default function DueDiligencePage() {
             <AnimatedItem>
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Buying a Practice Soon?
-                <br />
+                <br className="hidden sm:block" />
                 Let&rsquo;s Talk Before You Sign.
               </h2>
             </AnimatedItem>

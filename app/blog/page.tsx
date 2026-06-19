@@ -39,7 +39,7 @@ export default function BlogPage() {
           </p>
           <h1 className="font-display text-5xl font-semibold text-navy">
             Dental Practice
-            <br />
+            <br className="hidden sm:block" />
             Management Insights
           </h1>
           <p className="text-lg text-navy/60 leading-relaxed">

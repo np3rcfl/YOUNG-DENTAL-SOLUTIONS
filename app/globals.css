@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #FDFCF7;
-  --color-navy: #1A1A26;
-  --color-gold: #C09060;
-  --color-gold-light: #D4AE80;
-  --color-cream: #EDE9DF;
-  --color-blush: #D5CECC;
-  --color-muted: #8A8078;
+  --color-bg: #FAFAF8;
+  --color-navy: #151210;
+  --color-gold: #1F5C38;
+  --color-gold-light: #2E7A4E;
+  --color-cream: #EBE5D8;
+  --color-blush: #C9C0B0;
+  --color-muted: #7A7060;
 
-  --font-display: var(--font-cormorant), Georgia, "Times New Roman", serif;
-  --font-body: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-instrument), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-dm-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 @layer base {
@@ -21,25 +21,11 @@
   }
 
   body {
-    background-color: #FDFCF7;
-    color: #1A1A26;
+    background-color: #FAFAF8;
+    color: #151210;
     font-family: var(--font-body);
-    /* subtle warm gradient on scroll bg so bare body never shows flat white */
-    background-image: linear-gradient(180deg, #FDFCF7 0%, #F8F4EC 100%);
+    background-image: linear-gradient(180deg, #FAFAF8 0%, #F5F0E8 100%);
     background-attachment: fixed;
-  }
-
-  /* Film grain overlay — fixed, pointer-events-none, never on scroll containers */
-  body::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: 900;
-    pointer-events: none;
-    opacity: 0.032;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
-    background-repeat: repeat;
-    background-size: 180px 180px;
   }
 
   h1, h2, h3, h4 {
@@ -60,20 +46,20 @@
     align-items: center;
     gap: 0.5rem;
     border-radius: 9999px;
-    border: 1px solid color-mix(in srgb, #1A1A26 12%, transparent);
-    background-color: color-mix(in srgb, #1A1A26 4%, transparent);
+    border: 1px solid color-mix(in srgb, #151210 12%, transparent);
+    background-color: color-mix(in srgb, #151210 4%, transparent);
     padding: 0.375rem 0.875rem;
     font-size: 0.6875rem;
     font-family: var(--font-body);
     font-weight: 500;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: color-mix(in srgb, #1A1A26 50%, transparent);
+    color: color-mix(in srgb, #151210 50%, transparent);
   }
 
   .eyebrow-light {
-    border-color: color-mix(in srgb, #FDFCF7 15%, transparent);
-    background-color: color-mix(in srgb, #FDFCF7 6%, transparent);
-    color: color-mix(in srgb, #FDFCF7 55%, transparent);
+    border-color: color-mix(in srgb, #FAFAF8 15%, transparent);
+    background-color: color-mix(in srgb, #FAFAF8 6%, transparent);
+    color: color-mix(in srgb, #FAFAF8 55%, transparent);
   }
 }
