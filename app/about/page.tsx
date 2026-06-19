@@ -136,14 +136,24 @@ export default function AboutPage() {
                 >
                   <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[3/4]">
                     <Image
-                      src="/images/arlene-young.png"
+                      src="/images/arlene-headshot.jpg"
                       alt="Arlene Young, Dental Practice Consultant and Coach, Southern California"
                       fill
                       className="object-cover object-top"
                       priority
                       sizes="(max-width: 1024px) 90vw, 44vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/5 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/70 via-navy/10 to-transparent" />
+                    <div className="absolute top-5 left-5">
+                      <Image
+                        src="/images/arlene-young.png"
+                        alt="Arlene Young Dental Consultant logo"
+                        width={112}
+                        height={75}
+                        className="object-contain"
+                        style={{ filter: "invert(1) brightness(10)" }}
+                      />
+                    </div>
                     <div className="absolute bottom-6 left-6">
                       <p className="font-display text-bg/90 text-sm font-light italic">
                         Arlene Young
