@@ -1,19 +1,20 @@
-﻿import type { Metadata } from "next";
-import { Fraunces, DM_Sans } from "next/font/google";
+import type { Metadata } from "next";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 
-const fraunces = Fraunces({
+const cormorant = Cormorant_Garamond({
   subsets: ["latin"],
-  variable: "--font-fraunces",
+  variable: "--font-cormorant",
   display: "swap",
-  axes: ["opsz"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
-const dmSans = DM_Sans({
+const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-dm-sans",
+  variable: "--font-jakarta",
   display: "swap",
 });
 
@@ -102,14 +103,6 @@ const jsonLd = {
         "https://www.instagram.com/youngdentalsolutions/",
         "https://www.linkedin.com/in/arlene-young-dental/",
       ],
-      knowsAbout: [
-        "dental practice management",
-        "dental due diligence",
-        "dental practice coaching",
-        "dental practice recruiting",
-        "dental billing systems",
-        "dental scheduling optimization",
-      ],
     },
     {
       "@type": "Organization",
@@ -124,12 +117,6 @@ const jsonLd = {
         telephone: "+18582239714",
         email: "arlene@youngdentalsolutions.com",
         worksFor: { "@id": "https://youngdentalsolutions.com/#organization" },
-        knowsAbout: [
-          "dental practice management",
-          "dental practice consulting",
-          "dental due diligence",
-          "dental business coaching",
-        ],
         sameAs: ["https://www.linkedin.com/in/arlene-young-dental/"],
       },
     },
@@ -139,15 +126,6 @@ const jsonLd = {
       url: "https://youngdentalsolutions.com",
       name: "Young Dental Solutions",
       publisher: { "@id": "https://youngdentalsolutions.com/#organization" },
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate:
-            "https://youngdentalsolutions.com/?q={search_term_string}",
-        },
-        "query-input": "required name=search_term_string",
-      },
     },
   ],
 };
@@ -158,7 +136,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${dmSans.variable} antialiased`}>
+    <html lang="en" className={`${cormorant.variable} ${jakarta.variable} antialiased`}>
       <head>
         <script
           type="application/ld+json"

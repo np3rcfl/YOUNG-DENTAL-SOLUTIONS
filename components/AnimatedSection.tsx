@@ -4,15 +4,18 @@ import { motion } from "framer-motion";
 
 const container = {
   hidden: {},
-  visible: { transition: { staggerChildren: 0.13 } },
+  visible: { transition: { staggerChildren: 0.11 } },
 };
 
 const item = {
-  hidden: { opacity: 0, y: 24 },
+  hidden: { opacity: 0, y: 22 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] },
+    transition: {
+      duration: 0.72,
+      ease: [0.22, 1, 0.36, 1],
+    },
   },
 };
 
@@ -29,11 +32,13 @@ export function AnimatedContainer({
     <motion.div
       variants={{
         hidden: {},
-        visible: { transition: { staggerChildren: 0.13, delayChildren: delay } },
+        visible: {
+          transition: { staggerChildren: 0.11, delayChildren: delay },
+        },
       }}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.15 }}
+      viewport={{ once: true, amount: 0.12 }}
       className={className}
     >
       {children}

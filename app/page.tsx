@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -6,9 +6,9 @@ import {
   MagnifyingGlass,
   UsersThree,
   Handshake,
-  CheckCircle,
   ArrowRight,
   CaretDown,
+  CheckCircle,
 } from "@phosphor-icons/react/dist/ssr";
 import { HeroText, HeroTextItem, HeroImage } from "@/components/HomeAnimations";
 import { AnimatedContainer, AnimatedItem } from "@/components/AnimatedSection";
@@ -37,7 +37,7 @@ const faqJsonLd = {
       name: "What does a dental practice management consultant do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A dental practice management consultant analyzes your practice's systems, financials, scheduling, billing, and team dynamics to identify inefficiencies and growth opportunities. Unlike a general business consultant, a dental practice consultant understands the specific metrics, production per provider, collection rates, overhead percentages, and scheduling efficiency, that determine practice profitability.",
+        text: "A dental practice management consultant analyzes your practice's systems, financials, scheduling, billing, and team dynamics to identify inefficiencies and growth opportunities.",
       },
     },
     {
@@ -45,7 +45,7 @@ const faqJsonLd = {
       name: "How much does a dental practice consultant cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dental practice consulting fees vary based on scope and engagement type. Practice analysis engagements are typically project-based, while ongoing coaching is structured as a monthly retainer. Schedule a free consultation with Arlene Young to discuss your specific situation and get a clear picture of what engagement makes sense.",
+        text: "Dental practice consulting fees vary based on scope and engagement type. Practice analysis engagements are typically project-based, while ongoing coaching is structured as a monthly retainer.",
       },
     },
     {
@@ -53,7 +53,7 @@ const faqJsonLd = {
       name: "What is the difference between a dental coach and a dental consultant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A dental consultant typically delivers a report or playbook and moves on. A dental coach works with you over time, holding you accountable, adjusting the plan as your practice evolves, and staying available as a thought partner. Arlene Young operates as a coach, she picks up the phone, follows through on every commitment, and treats your practice as a long-term relationship.",
+        text: "A dental consultant typically delivers a report and moves on. A dental coach works with you over time, holding you accountable and staying available as a thought partner.",
       },
     },
     {
@@ -61,7 +61,7 @@ const faqJsonLd = {
       name: "How long does it take to see results from dental practice consulting?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most practices see meaningful movement in 60-90 days after implementing the changes identified in a practice analysis. Scheduling and billing improvements often show results within the first month. Full cultural and systems transformation typically takes 6-12 months, depending on the depth of changes needed.",
+        text: "Most practices see meaningful movement in 60-90 days. Scheduling and billing improvements often show results within the first month.",
       },
     },
     {
@@ -69,7 +69,7 @@ const faqJsonLd = {
       name: "When should I hire a dental practice consultant?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You should consider a dental practice consultant if your production has plateaued, overhead is creeping above 65%, you're losing patients without understanding why, your team has high turnover, or you're preparing to buy or sell a practice. Even high-performing practices benefit from an objective outside view.",
+        text: "Consider a dental practice consultant if your production has plateaued, overhead is above 65%, you're losing patients without understanding why, or you're preparing to buy or sell a practice.",
       },
     },
     {
@@ -77,46 +77,11 @@ const faqJsonLd = {
       name: "What does dental practice due diligence include?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dental practice due diligence includes a thorough review of production and collection trends, overhead ratios, patient retention and new patient flow, billing and insurance mix, staffing costs and turnover, equipment condition, lease terms, and practice culture. The goal is to give you a complete picture of what you're actually buying before you sign.",
+        text: "Due diligence includes review of production and collection trends, overhead ratios, patient retention, billing and insurance mix, staffing costs, equipment condition, lease terms, and practice culture.",
       },
     },
   ],
 };
-
-const services = [
-  {
-    icon: ChartLineUp,
-    title: "Practice Management",
-    tagline: "Your practice metrics are telling a story. Let's find out what it says.",
-    description:
-      "A deep analysis of your scheduling, billing, team dynamics, and financials, with a prioritized action plan you can execute.",
-    href: "/services/practice-management",
-  },
-  {
-    icon: MagnifyingGlass,
-    title: "Due Diligence",
-    tagline: "Before you sign on a practice, know what you're actually buying.",
-    description:
-      "Production trends, overhead ratios, team health, lease terms, everything you need to make a confident acquisition decision.",
-    href: "/services/due-diligence",
-  },
-  {
-    icon: Handshake,
-    title: "Coaching",
-    tagline: "Clarity on your numbers. Confidence in your decisions.",
-    description:
-      "1-on-1 ongoing coaching for dentists who want a thought partner, not a template, as they grow their practice.",
-    href: "/services/coaching",
-  },
-  {
-    icon: UsersThree,
-    title: "Recruiting",
-    tagline: "The right team is the difference between a practice that runs and one that drains you.",
-    description:
-      "Talent acquisition and team-building support for dental practices across Southern California.",
-    href: "/services/recruiting",
-  },
-];
 
 const faqs = [
   {
@@ -129,7 +94,7 @@ const faqs = [
   },
   {
     q: "What's the difference between a dental coach and a consultant?",
-    a: "A consultant delivers a report and moves on. Arlene operates as a coach, she picks up the phone, follows through on every commitment, and stays with you as your practice evolves.",
+    a: "A consultant delivers a report and moves on. Arlene operates as a coach — she picks up the phone, follows through on every commitment, and stays with you as your practice evolves.",
   },
   {
     q: "How long before I see results?",
@@ -137,11 +102,11 @@ const faqs = [
   },
   {
     q: "When should I hire a dental practice consultant?",
-    a: "If production has plateaued, overhead is above 65%, you're losing patients you can't explain, or you're preparing to buy or sell, it's time.",
+    a: "If production has plateaued, overhead is above 65%, you're losing patients you can't explain, or you're preparing to buy or sell — it's time.",
   },
   {
     q: "What does dental due diligence include?",
-    a: "Production and collection trends, overhead ratios, patient retention, billing mix, staffing costs, equipment condition, lease terms, and practice culture, everything before you sign.",
+    a: "Production and collection trends, overhead ratios, patient retention, billing mix, staffing costs, equipment condition, lease terms, and practice culture — everything before you sign.",
   },
 ];
 
@@ -159,7 +124,26 @@ const steps = [
   {
     num: "03",
     title: "Prioritized Action Plan",
-    desc: "Not a 90-page playbook. A focused, ranked list of changes that will move the needle, starting this month.",
+    desc: "Not a 90-page playbook. A focused, ranked list of changes that will move the needle — starting this month.",
+  },
+];
+
+const differentiators = [
+  {
+    them: "Sent a playbook for someone else's practice",
+    us: "Diagnosis before prescription — your practice, your plan",
+  },
+  {
+    them: "Never returned your calls",
+    us: "Arlene picks up the phone",
+  },
+  {
+    them: "Guaranteed results, delivered regret",
+    us: "Transparent about what's realistic — honesty over promises",
+  },
+  {
+    them: "Made your team feel like the problem",
+    us: "Coaches your team as a partner, not a liability",
   },
 ];
 
@@ -172,25 +156,6 @@ const cities = [
   "Orange County",
 ];
 
-const differentiators = [
-  {
-    them: "Sent a playbook for someone else's practice",
-    us: "Diagnosis before prescription, your practice, your plan",
-  },
-  {
-    them: "Never returned your calls",
-    us: "Arlene picks up the phone",
-  },
-  {
-    them: "Guaranteed results, delivered regret",
-    us: "Transparent about what's realistic, no guarantees, only honesty",
-  },
-  {
-    them: "Made your team feel like the problem",
-    us: "Coaches your team as a partner, not a liability",
-  },
-];
-
 export default function HomePage() {
   return (
     <>
@@ -199,141 +164,210 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
-      {/* Hero */}
-      <section className="min-h-[100dvh] flex items-center pt-24 pb-16 bg-navy">
-        <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[58%_42%] gap-12 items-center">
-          <HeroText>
-            <HeroTextItem>
-              <p className="text-sm font-body font-medium text-bg/50 uppercase tracking-widest">
-                Dental Practice Consulting &middot; San Diego, CA
-              </p>
-            </HeroTextItem>
-            <HeroTextItem>
-              <h1 className="font-display text-5xl lg:text-7xl font-semibold text-bg leading-[1.05]">
-                30 Years.
-                <br />
-                One Coach.
-                <br />
-                <span className="text-gold">Your Practice,</span>
-                <br />
-                Finally Running
-                <br />
-                Like a Business.
-              </h1>
-            </HeroTextItem>
-            <HeroTextItem>
-              <p className="text-lg text-bg/60 max-w-xl leading-relaxed">
-                Most consultants send a playbook. Arlene picks up the phone.
-                Young Dental Solutions brings 30+ years of dental industry
-                experience and a finance background to practices across Southern
-                California. 1-on-1, no templates.
-              </p>
-            </HeroTextItem>
-            <HeroTextItem>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-bg text-navy rounded-lg font-medium font-body hover:bg-bg/90 transition-colors"
-                >
-                  Schedule Free Consultation
-                  <ArrowRight size={18} weight="bold" />
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-bg/20 text-bg rounded-lg font-medium font-body hover:border-bg/40 transition-colors"
-                >
-                  See All Services
-                </Link>
-              </div>
-            </HeroTextItem>
-          </HeroText>
+      {/* ─── HERO ─── */}
+      <section className="min-h-[100dvh] flex items-center pt-28 pb-20 bg-navy overflow-hidden">
+        <div className="max-w-[1200px] mx-auto px-6 w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] gap-10 xl:gap-16 items-center">
 
-          <HeroImage>
-            <div className="relative rounded-2xl overflow-hidden border border-bg/10 p-1.5">
-              <div className="relative rounded-xl overflow-hidden aspect-[4/5]">
-                <Image
-                  src="/images/arlene-young.jpg"
-                  alt="Arlene Young, Dental Practice Consultant serving San Diego and Southern California"
-                  fill
-                  className="object-cover object-top"
-                  priority
-                  sizes="(max-width: 1200px) 40vw, 480px"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
+            {/* Left: Text */}
+            <HeroText>
+              <HeroTextItem>
+                <span className="eyebrow eyebrow-light">
+                  Dental Practice Consulting &middot; San Diego, CA
+                </span>
+              </HeroTextItem>
+
+              <HeroTextItem>
+                <h1 className="font-display text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem] xl:text-[5.5rem] font-light text-bg leading-[0.98] tracking-[-0.02em]">
+                  30 Years.
+                  <br />
+                  One Coach.
+                  <br />
+                  <em className="text-gold" style={{ fontStyle: "italic" }}>
+                    Your Practice,
+                  </em>
+                  <br />
+                  Finally Running
+                  <br />
+                  Like a Business.
+                </h1>
+              </HeroTextItem>
+
+              <HeroTextItem>
+                <p className="text-base md:text-lg text-bg/55 max-w-lg leading-relaxed font-body font-light">
+                  Most consultants send a playbook. Arlene picks up the phone.
+                  30+ years of dental industry experience and a finance
+                  background, applied 1-on-1 to your practice.
+                </p>
+              </HeroTextItem>
+
+              <HeroTextItem>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  {/* Primary CTA — button-in-button architecture */}
+                  <Link
+                    href="/contact"
+                    className="group inline-flex items-center justify-between gap-6 px-5 py-3.5 bg-bg text-navy rounded-full font-body font-medium text-sm hover:bg-bg/96 active:scale-[0.98] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)]"
+                  >
+                    Schedule Free Consultation
+                    <span className="w-8 h-8 rounded-full bg-navy/8 flex items-center justify-center transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:scale-110">
+                      <ArrowRight size={13} weight="bold" />
+                    </span>
+                  </Link>
+                  {/* Ghost CTA */}
+                  <Link
+                    href="/services"
+                    className="inline-flex items-center justify-center px-5 py-3.5 rounded-full border border-bg/20 text-bg font-body font-medium text-sm hover:border-bg/45 hover:bg-bg/6 transition-all duration-300"
+                  >
+                    See All Services
+                  </Link>
+                </div>
+              </HeroTextItem>
+            </HeroText>
+
+            {/* Right: Photo with Z-axis depth */}
+            <HeroImage>
+              <div className="relative mt-6 lg:mt-0">
+                {/* Outer double-bezel frame, slightly rotated */}
+                <div
+                  className="relative rounded-[2rem] p-2 bg-bg/5 border border-bg/10"
+                  style={{ transform: "rotate(-1.5deg)" }}
+                >
+                  <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[3/4]">
+                    <Image
+                      src="/images/arlene-young.jpg"
+                      alt="Arlene Young, Dental Practice Consultant serving San Diego and Southern California"
+                      fill
+                      className="object-cover object-top"
+                      priority
+                      sizes="(max-width: 1024px) 90vw, 44vw"
+                    />
+                    {/* Gradient overlay for text legibility */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-navy/5 to-transparent" />
+                    {/* Inner image caption */}
+                    <div className="absolute bottom-6 left-6">
+                      <p className="font-display text-bg/90 text-sm font-light italic">
+                        Arlene Young
+                      </p>
+                      <p className="text-bg/50 text-xs font-body mt-0.5">
+                        Founder, Young Dental Solutions
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Floating stat card — bottom left */}
+                <div
+                  className="absolute bottom-10 -left-5 rounded-2xl bg-bg/95 backdrop-blur-sm border border-navy/8 shadow-2xl shadow-navy/15 p-0.5"
+                  style={{ transform: "rotate(1.5deg)" }}
+                >
+                  <div className="rounded-[calc(1rem-0.125rem)] bg-bg px-5 py-4 border border-navy/5">
+                    <p className="font-display text-3xl font-semibold text-navy leading-none">
+                      30+
+                    </p>
+                    <p className="text-[11px] text-navy/45 font-body mt-1 tracking-wide">
+                      Years in Dental Industry
+                    </p>
+                  </div>
+                </div>
+
+                {/* Floating location card — top right */}
+                <div
+                  className="absolute -top-3 -right-3 rounded-xl bg-navy/96 backdrop-blur-sm border border-bg/10 shadow-xl px-4 py-3"
+                  style={{ transform: "rotate(1.5deg)" }}
+                >
+                  <p className="text-[10px] text-bg/45 font-body uppercase tracking-wider">
+                    Service Area
+                  </p>
+                  <p className="text-xs text-bg/80 font-body font-medium mt-0.5">
+                    Southern California
+                  </p>
+                </div>
               </div>
-            </div>
-          </HeroImage>
+            </HeroImage>
+          </div>
         </div>
       </section>
 
-      {/* Trust Bar */}
-      <section className="bg-cream py-10">
+      {/* ─── TRUST BAR ─── */}
+      <section className="bg-cream py-12">
         <div className="max-w-4xl mx-auto px-6">
-          <AnimatedContainer className="grid grid-cols-3 divide-x divide-navy/10 text-center">
+          <AnimatedContainer className="grid grid-cols-3 divide-x divide-navy/10">
             {[
               { stat: "30+", label: "Years in Dental Industry" },
-              { stat: "4", label: "Specialized Services" },
-              { stat: "SoCal", label: "Wide Service Area" },
+              { stat: "1-on-1", label: "Every Engagement, Always" },
+              { stat: "SoCal", label: "Wide Regional Coverage" },
             ].map(({ stat, label }) => (
-              <AnimatedItem key={stat} className="px-6 py-4">
+              <AnimatedItem key={stat} className="px-6 py-4 text-center">
                 <p className="font-display text-3xl lg:text-4xl font-semibold text-navy">
                   {stat}
                 </p>
-                <p className="text-navy/50 text-sm mt-1 font-body">{label}</p>
+                <p className="text-navy/45 text-xs mt-1.5 font-body tracking-wide">
+                  {label}
+                </p>
               </AnimatedItem>
             ))}
           </AnimatedContainer>
         </div>
       </section>
 
-      {/* About Preview */}
-      <section className="py-24">
+      {/* ─── ABOUT PREVIEW ─── */}
+      <section className="py-32">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <AnimatedContainer>
-            <AnimatedItem className="space-y-6">
-              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
-                Why Arlene
-              </p>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-navy">
+            <AnimatedItem className="space-y-7">
+              <span className="eyebrow">Why Arlene</span>
+              <h2 className="font-display text-4xl lg:text-5xl xl:text-[3.25rem] font-light text-navy leading-[1.05]">
                 A Finance Background
                 <br />
-                Changes Everything.
+                <em style={{ fontStyle: "italic" }} className="text-gold">
+                  Changes Everything.
+                </em>
               </h2>
-              <p className="text-navy/60 leading-relaxed">
+              <p className="text-navy/58 leading-relaxed font-body">
                 Most dental consultants come from clinical backgrounds. Arlene
-                Young comes from finance, which means she reads your practice the
-                way a CFO reads a balance sheet. She finds the 2-3 levers that
-                actually move the needle, rather than prescribing solutions
-                designed for someone else&rsquo;s practice.
+                Young comes from finance — which means she reads your practice
+                the way a CFO reads a balance sheet. She finds the 2-3 levers
+                that actually move the needle.
               </p>
-              <p className="text-navy/60 leading-relaxed">
+              <p className="text-navy/58 leading-relaxed font-body">
                 After 30+ years working across every practice type in Southern
-                California, she brings both the pattern recognition of a seasoned
-                consultant and the accountability of a personal coach. She picks
-                up the phone. She follows through. She stays.
+                California, she brings both the pattern recognition of a
+                seasoned consultant and the accountability of a personal coach.
+                She picks up the phone. She follows through. She stays.
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-navy font-medium font-body hover:gap-3 transition-all"
+                className="group inline-flex items-center gap-2.5 text-navy font-body font-medium text-sm hover:text-navy/70 transition-all duration-300"
               >
                 Meet Arlene
-                <ArrowRight size={18} weight="bold" />
+                <ArrowRight
+                  size={15}
+                  weight="bold"
+                  className="transition-all duration-300 group-hover:translate-x-0.5"
+                />
               </Link>
             </AnimatedItem>
           </AnimatedContainer>
 
-          <AnimatedContainer delay={0.1}>
+          <AnimatedContainer delay={0.08}>
             {[
-              { text: "Finance-first analysis, not clinical assumption" },
-              { text: "1-on-1 coaching, not group programs or playbooks" },
-              { text: "30+ years of Southern California dental industry knowledge" },
-              { text: "Real accountability, she picks up the phone" },
-            ].map(({ text }) => (
-              <AnimatedItem key={text} className="mb-4">
-                <div className="flex items-start gap-4 rounded-2xl bg-cream border border-navy/8 p-1">
-                  <div className="rounded-xl bg-bg border border-navy/5 p-5 flex items-start gap-4 w-full">
-                    <CheckCircle size={22} weight="fill" className="text-navy mt-0.5 shrink-0" />
-                    <p className="text-navy/70 font-body">{text}</p>
+              "Finance-first analysis, not clinical assumption",
+              "1-on-1 coaching, not group programs or playbooks",
+              "30+ years of Southern California dental industry knowledge",
+              "Real accountability — she picks up the phone",
+            ].map((text) => (
+              <AnimatedItem key={text} className="mb-3.5">
+                {/* Double-bezel card */}
+                <div className="rounded-2xl bg-cream border border-navy/8 p-1">
+                  <div className="rounded-[calc(1rem-0.25rem)] bg-bg border border-navy/5 px-5 py-4 flex items-start gap-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.8)]">
+                    <CheckCircle
+                      size={18}
+                      weight="fill"
+                      className="text-gold mt-0.5 shrink-0"
+                    />
+                    <p className="text-navy/68 font-body text-sm leading-relaxed">
+                      {text}
+                    </p>
                   </div>
                 </div>
               </AnimatedItem>
@@ -342,76 +376,216 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services */}
-      <section className="py-24 bg-navy" id="services">
+      {/* ─── SERVICES BENTO ─── */}
+      <section className="py-32 bg-navy" id="services">
         <div className="max-w-6xl mx-auto px-6">
-          <AnimatedContainer className="text-center mb-16 space-y-4">
+          <AnimatedContainer className="mb-14 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-bg/40 uppercase tracking-widest">
-                Services
-              </p>
+              <span className="eyebrow eyebrow-light">Services</span>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-bg">
-                Four Ways We Grow Your Practice
+              <h2 className="font-display text-4xl lg:text-5xl xl:text-[3.5rem] font-light text-bg leading-[1.05]">
+                Four Ways We Grow
+                <br />
+                <em style={{ fontStyle: "italic" }} className="text-gold">
+                  Your Practice
+                </em>
               </h2>
             </AnimatedItem>
           </AnimatedContainer>
 
-          <AnimatedContainer className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            {services.map(({ icon: Icon, title, tagline, description, href }) => (
-              <AnimatedItem key={href}>
-                <Link
-                  href={href}
-                  className="group block rounded-2xl bg-bg/5 border border-bg/10 p-1.5 hover:bg-bg/10 hover:border-bg/20 hover:shadow-xl transition-all duration-300 h-full"
-                >
-                  <div className="rounded-xl bg-bg/5 border border-bg/8 p-7 space-y-4 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-bg/10 flex items-center justify-center group-hover:bg-bg/20 transition-colors">
-                      <Icon size={22} weight="duotone" className="text-bg/70" />
+          {/* Asymmetric bento grid */}
+          <AnimatedContainer className="grid grid-cols-1 md:grid-cols-12 gap-4">
+
+            {/* Practice Management — wide, image card */}
+            <AnimatedItem className="md:col-span-7">
+              <Link
+                href="/services/practice-management"
+                className="group block rounded-[2rem] bg-bg/5 border border-bg/10 p-2 overflow-hidden h-full min-h-[400px] relative transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-bg/25"
+              >
+                <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden h-full min-h-[384px]">
+                  <Image
+                    src="/images/service-strategizing.jpg"
+                    alt="Dental practice management consulting"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 58vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/30 to-transparent" />
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                    <div className="w-10 h-10 rounded-xl bg-bg/10 border border-bg/15 flex items-center justify-center">
+                      <ChartLineUp size={18} weight="light" className="text-bg/80" />
                     </div>
-                    <p className="font-display text-xl font-semibold text-bg">{title}</p>
-                    <p className="text-sm font-body text-gold italic">{tagline}</p>
-                    <p className="text-sm text-bg/50 leading-relaxed">{description}</p>
-                    <span className="inline-flex items-center gap-1.5 text-sm text-bg/60 font-medium group-hover:gap-3 group-hover:text-bg transition-all">
-                      Learn more <ArrowRight size={14} weight="bold" />
+                    <div className="space-y-2">
+                      <p className="text-gold text-[10px] uppercase tracking-[0.2em] font-body font-medium">
+                        Practice Management
+                      </p>
+                      <h3 className="font-display text-3xl font-light text-bg leading-tight">
+                        Your practice metrics
+                        <br />
+                        are telling a story.
+                      </h3>
+                      <p className="text-bg/55 text-sm font-body leading-relaxed max-w-sm">
+                        Deep analysis of scheduling, billing, and financials
+                        with a prioritized action plan.
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 text-bg/60 text-xs font-body font-medium group-hover:text-bg transition-colors duration-300 pt-1">
+                        Learn more{" "}
+                        <ArrowRight
+                          size={11}
+                          weight="bold"
+                          className="transition-all duration-300 group-hover:translate-x-0.5"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </AnimatedItem>
+
+            {/* Due Diligence — narrow, dark text card */}
+            <AnimatedItem className="md:col-span-5">
+              <Link
+                href="/services/due-diligence"
+                className="group block rounded-[2rem] bg-bg/5 border border-bg/10 p-2 h-full min-h-[400px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-bg/8 hover:border-bg/22"
+              >
+                <div className="rounded-[calc(2rem-0.5rem)] bg-bg/5 border border-bg/8 p-8 h-full min-h-[384px] flex flex-col justify-between shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                  <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/25 flex items-center justify-center">
+                    <MagnifyingGlass size={17} weight="light" className="text-gold" />
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-gold text-[10px] uppercase tracking-[0.2em] font-body font-medium">
+                      Due Diligence
+                    </p>
+                    <h3 className="font-display text-3xl font-light text-bg leading-tight">
+                      Before you sign, know what you're buying.
+                    </h3>
+                    <p className="text-bg/50 text-sm font-body leading-relaxed">
+                      Production trends, overhead ratios, team health, lease
+                      terms — everything before the acquisition.
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-bg/55 text-xs font-body font-medium group-hover:text-bg transition-colors duration-300">
+                      Learn more{" "}
+                      <ArrowRight size={11} weight="bold" className="transition-all duration-300 group-hover:translate-x-0.5" />
                     </span>
                   </div>
-                </Link>
-              </AnimatedItem>
-            ))}
+                </div>
+              </Link>
+            </AnimatedItem>
+
+            {/* Coaching — narrow, dark text card */}
+            <AnimatedItem className="md:col-span-5">
+              <Link
+                href="/services/coaching"
+                className="group block rounded-[2rem] bg-bg/5 border border-bg/10 p-2 h-full min-h-[400px] transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:bg-bg/8 hover:border-bg/22"
+              >
+                <div className="rounded-[calc(2rem-0.5rem)] bg-bg/5 border border-bg/8 p-8 h-full min-h-[384px] flex flex-col justify-between shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+                  <div className="w-10 h-10 rounded-xl bg-gold/15 border border-gold/25 flex items-center justify-center">
+                    <Handshake size={17} weight="light" className="text-gold" />
+                  </div>
+                  <div className="space-y-4">
+                    <p className="text-gold text-[10px] uppercase tracking-[0.2em] font-body font-medium">
+                      Coaching
+                    </p>
+                    <h3 className="font-display text-3xl font-light text-bg leading-tight">
+                      Clarity on your numbers. Confidence in your decisions.
+                    </h3>
+                    <p className="text-bg/50 text-sm font-body leading-relaxed">
+                      1-on-1 ongoing coaching for dentists who want a thought
+                      partner, not a template.
+                    </p>
+                    <span className="inline-flex items-center gap-1.5 text-bg/55 text-xs font-body font-medium group-hover:text-bg transition-colors duration-300">
+                      Learn more{" "}
+                      <ArrowRight size={11} weight="bold" className="transition-all duration-300 group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </AnimatedItem>
+
+            {/* Recruiting — wide, image card */}
+            <AnimatedItem className="md:col-span-7">
+              <Link
+                href="/services/recruiting"
+                className="group block rounded-[2rem] bg-bg/5 border border-bg/10 p-2 overflow-hidden h-full min-h-[400px] relative transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] hover:border-bg/25"
+              >
+                <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden h-full min-h-[384px]">
+                  <Image
+                    src="/images/service-planning.jpg"
+                    alt="Dental practice team building and recruiting"
+                    fill
+                    className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 58vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy/85 via-navy/30 to-transparent" />
+                  <div className="absolute inset-0 p-8 flex flex-col justify-between">
+                    <div className="w-10 h-10 rounded-xl bg-bg/10 border border-bg/15 flex items-center justify-center">
+                      <UsersThree size={18} weight="light" className="text-bg/80" />
+                    </div>
+                    <div className="space-y-2">
+                      <p className="text-gold text-[10px] uppercase tracking-[0.2em] font-body font-medium">
+                        Recruiting
+                      </p>
+                      <h3 className="font-display text-3xl font-light text-bg leading-tight">
+                        The right team is
+                        <br />
+                        the difference.
+                      </h3>
+                      <p className="text-bg/55 text-sm font-body leading-relaxed max-w-sm">
+                        Talent acquisition and team-building support across
+                        Southern California.
+                      </p>
+                      <span className="inline-flex items-center gap-1.5 text-bg/60 text-xs font-body font-medium group-hover:text-bg transition-colors duration-300 pt-1">
+                        Learn more{" "}
+                        <ArrowRight
+                          size={11}
+                          weight="bold"
+                          className="transition-all duration-300 group-hover:translate-x-0.5"
+                        />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </AnimatedItem>
           </AnimatedContainer>
         </div>
       </section>
 
-      {/* Why Arlene, Counter-positioning */}
-      <section className="py-24">
+      {/* ─── COUNTER-POSITIONING ─── */}
+      <section className="py-32">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-            <AnimatedItem className="space-y-6">
-              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
-                The Difference
-              </p>
-              <h2 className="font-display text-4xl font-semibold text-navy">
+            <AnimatedItem className="space-y-7">
+              <span className="eyebrow">The Difference</span>
+              <h2 className="font-display text-4xl lg:text-5xl font-light text-navy leading-[1.05]">
                 You&rsquo;ve Tried Consultants.
                 <br />
-                Try One Who Actually Shows Up.
+                <em style={{ fontStyle: "italic" }} className="text-gold">
+                  Try One Who Shows Up.
+                </em>
               </h2>
-              <p className="text-navy/60 leading-relaxed">
-                Dentists who&rsquo;ve worked with consultants before come to
-                Arlene with the same story: never returned calls, sent a
-                playbook that wasn&rsquo;t built for their practice, guaranteed
-                30% growth and delivered chaos. That&rsquo;s not how Arlene
-                works.
+              <p className="text-navy/55 leading-relaxed font-body">
+                Dentists who&rsquo;ve worked with consultants before come to Arlene
+                with the same story: never returned calls, sent a playbook that
+                wasn&rsquo;t built for their practice, guaranteed 30% growth and
+                delivered chaos.
               </p>
             </AnimatedItem>
-            <AnimatedItem className="space-y-4">
+            <AnimatedItem className="space-y-3">
               {differentiators.map(({ them, us }) => (
                 <div
                   key={us}
-                  className="grid grid-cols-2 gap-4 p-4 rounded-xl bg-cream border border-navy/8"
+                  className="rounded-2xl bg-cream border border-navy/8 p-1"
                 >
-                  <p className="text-sm text-navy/30 line-through">{them}</p>
-                  <p className="text-sm text-navy/80 font-medium">{us}</p>
+                  <div className="rounded-[calc(1rem-0.25rem)] bg-bg border border-navy/5 grid grid-cols-2 gap-4 p-5">
+                    <p className="text-sm text-navy/25 line-through leading-relaxed font-body">
+                      {them}
+                    </p>
+                    <p className="text-sm text-navy/75 font-medium leading-relaxed font-body">
+                      {us}
+                    </p>
+                  </div>
                 </div>
               ))}
             </AnimatedItem>
@@ -419,33 +593,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="py-24 bg-cream">
-        <div className="max-w-4xl mx-auto px-6">
-          <AnimatedContainer className="text-center mb-16 space-y-4">
+      {/* ─── HOW IT WORKS ─── */}
+      <section className="py-32 bg-cream">
+        <div className="max-w-3xl mx-auto px-6">
+          <AnimatedContainer className="text-center mb-14 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
-                Process
-              </p>
+              <span className="eyebrow">Process</span>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display text-4xl font-semibold text-navy">
+              <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">
                 How It Works
               </h2>
             </AnimatedItem>
           </AnimatedContainer>
 
-          <AnimatedContainer className="space-y-5">
+          <AnimatedContainer className="space-y-4">
             {steps.map(({ num, title, desc }) => (
               <AnimatedItem key={num}>
                 <div className="rounded-2xl bg-bg border border-navy/8 p-1">
-                  <div className="rounded-xl border border-navy/5 bg-bg p-8 flex gap-6">
-                    <span className="font-display text-4xl font-semibold text-navy/15 shrink-0 leading-none mt-1">
+                  <div className="rounded-[calc(1rem-0.25rem)] bg-bg border border-navy/5 px-7 py-7 flex gap-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
+                    <span className="font-display text-5xl font-light text-navy/12 shrink-0 leading-none mt-1.5">
                       {num}
                     </span>
                     <div className="space-y-2">
-                      <h3 className="font-display text-xl font-semibold text-navy">{title}</h3>
-                      <p className="text-navy/60 leading-relaxed">{desc}</p>
+                      <h3 className="font-display text-xl font-medium text-navy">
+                        {title}
+                      </h3>
+                      <p className="text-navy/55 leading-relaxed font-body text-sm">
+                        {desc}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -455,34 +631,32 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-24" id="faq">
+      {/* ─── FAQ ─── */}
+      <section className="py-32" id="faq">
         <div className="max-w-3xl mx-auto px-6">
-          <AnimatedContainer className="text-center mb-16 space-y-4">
+          <AnimatedContainer className="text-center mb-14 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
-                FAQ
-              </p>
+              <span className="eyebrow">FAQ</span>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display text-4xl font-semibold text-navy">
-                Frequently Asked Questions
+              <h2 className="font-display text-4xl lg:text-5xl font-light text-navy">
+                Common Questions
               </h2>
             </AnimatedItem>
           </AnimatedContainer>
 
-          <AnimatedContainer className="space-y-3">
+          <AnimatedContainer className="space-y-2.5">
             {faqs.map(({ q, a }) => (
               <AnimatedItem key={q}>
-                <details className="group border border-navy/10 rounded-xl overflow-hidden bg-bg">
-                  <summary className="flex items-center justify-between p-6 cursor-pointer font-display font-semibold text-navy list-none">
+                <details className="group rounded-2xl bg-cream border border-navy/8 overflow-hidden">
+                  <summary className="flex items-center justify-between px-6 py-5 cursor-pointer font-display font-medium text-navy text-lg list-none select-none hover:bg-navy/3 transition-colors duration-200">
                     {q}
                     <CaretDown
-                      size={20}
-                      className="shrink-0 text-navy/30 transition-transform group-open:rotate-180"
+                      size={18}
+                      className="shrink-0 text-navy/30 transition-transform duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] group-open:rotate-180"
                     />
                   </summary>
-                  <p className="px-6 pb-6 text-navy/60 leading-relaxed border-t border-navy/5 pt-4">
+                  <p className="px-6 pb-6 text-navy/58 leading-relaxed border-t border-navy/6 pt-4 font-body text-sm">
                     {a}
                   </p>
                 </details>
@@ -492,71 +666,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Service Areas */}
-      <section className="py-16 bg-cream">
-        <div className="max-w-4xl mx-auto px-6">
+      {/* ─── SERVICE AREAS ─── */}
+      <section className="py-20 bg-cream">
+        <div className="max-w-3xl mx-auto px-6">
           <AnimatedContainer className="text-center space-y-6">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
-                Service Areas
-              </p>
+              <span className="eyebrow">Service Areas</span>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display text-3xl font-semibold text-navy">
+              <h2 className="font-display text-3xl lg:text-4xl font-light text-navy">
                 Serving Southern California
               </h2>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="text-navy/50">
-                Young Dental Solutions works with dental practices across:
-              </p>
-            </AnimatedItem>
-            <AnimatedItem>
-              <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex flex-wrap justify-center gap-2.5">
                 {cities.map((city) => (
                   <span
                     key={city}
-                    className="px-4 py-2 bg-bg rounded-full border border-navy/12 text-navy/60 text-sm font-body"
+                    className="px-4 py-2 bg-bg rounded-full border border-navy/10 text-navy/55 text-xs font-body tracking-wide"
                   >
                     {city}
                   </span>
                 ))}
               </div>
-            </AnimatedItem>
-          </AnimatedContainer>
-        </div>
-      </section>
-
-      {/* CTA Band */}
-      <section className="py-24 bg-navy">
-        <div className="max-w-4xl mx-auto px-6">
-          <AnimatedContainer className="text-center space-y-6">
-            <AnimatedItem>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-bg">
-                Ready to Stop Guessing
-                <br />
-                and Start Growing?
-              </h2>
-            </AnimatedItem>
-            <AnimatedItem>
-              <p className="text-bg/50 text-lg max-w-xl mx-auto">
-                Schedule a free consultation. 30 minutes. No pitch. Just an honest
-                look at your practice and where it could go.
-              </p>
-            </AnimatedItem>
-            <AnimatedItem>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-bg text-navy rounded-xl font-medium text-lg font-body hover:bg-bg/90 transition-colors"
-              >
-                Schedule Free Consultation
-                <ArrowRight size={20} weight="bold" />
-              </Link>
-            </AnimatedItem>
-            <AnimatedItem>
-              <p className="text-sm text-bg/30">
-                858-223-9714 &middot; arlene@youngdentalsolutions.com
-              </p>
             </AnimatedItem>
           </AnimatedContainer>
         </div>
