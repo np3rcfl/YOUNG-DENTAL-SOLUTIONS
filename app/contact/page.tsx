@@ -1,18 +1,18 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { Phone, Envelope, InstagramLogo, LinkedinLogo, MapPin } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
   title: "Free Dental Practice Consultation | Contact Young Dental Solutions",
   description:
-    "Schedule a free consultation with Arlene Young — dental practice consultant serving San Diego, Rancho Bernardo, Beverly Hills, Santa Clarita, and all of Southern California.",
+    "Schedule a free consultation with Arlene Young, dental practice consultant serving San Diego, Rancho Bernardo, Beverly Hills, Santa Clarita, and all of Southern California.",
   alternates: {
     canonical: "https://youngdentalsolutions.com/contact",
   },
   openGraph: {
     title: "Free Dental Practice Consultation | Young Dental Solutions",
     description:
-      "Schedule a free 30-minute consultation with Arlene Young. No pitch — just an honest look at your practice.",
+      "Schedule a free 30-minute consultation with Arlene Young. No pitch, just an honest look at your practice.",
     url: "https://youngdentalsolutions.com/contact",
   },
 };
@@ -53,7 +53,7 @@ export default function ContactPage() {
           </nav>
 
           <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16">
-            {/* Left — Info */}
+            {/* Left, Info */}
             <div className="space-y-8">
               <div className="space-y-4">
                 <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
@@ -67,7 +67,7 @@ export default function ContactPage() {
                 <p className="text-lg text-navy/70 leading-relaxed">
                   Schedule a free 30-minute consultation. Arlene will listen to
                   your situation, ask the right questions, and give you an
-                  honest perspective — no pitch, no pressure.
+                  honest perspective, no pitch, no pressure.
                 </p>
               </div>
 
@@ -153,7 +153,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Right — Form */}
+            {/* Right, Form */}
             <div>
               <form
                 action="mailto:arlene@youngdentalsolutions.com"
@@ -219,7 +219,7 @@ export default function ContactPage() {
                     id="practice"
                     name="practice"
                     type="text"
-                    placeholder="Sunshine Dental — San Diego, CA"
+                    placeholder="Sunshine Dental, San Diego, CA"
                     className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold text-sm"
                   />
                 </div>
@@ -238,7 +238,7 @@ export default function ContactPage() {
                     <option value="due-diligence">Due Diligence (buying a practice)</option>
                     <option value="coaching">1-on-1 Coaching</option>
                     <option value="recruiting">Recruiting / Staffing</option>
-                    <option value="not-sure">Not sure yet — just want to talk</option>
+                    <option value="not-sure">Not sure yet, just want to talk</option>
                   </select>
                 </div>
 

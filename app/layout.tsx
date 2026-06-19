@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Fraunces, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Young Dental Solutions",
   },
   description:
-    "Arlene Young brings 30+ years of dental practice consulting to Southern California. Practice management, due diligence, coaching, and recruiting — all 1-on-1.",
+    "Arlene Young brings 30+ years of dental practice consulting to Southern California. Practice management, due diligence, coaching, and recruiting, all 1-on-1.",
   keywords: [
     "dental practice consultant San Diego",
     "dental practice management Southern California",
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     siteName: "Young Dental Solutions",
     title: "Dental Practice Consultant San Diego | Young Dental Solutions",
     description:
-      "Arlene Young brings 30+ years of dental practice consulting to Southern California. Practice management, due diligence, coaching, and recruiting — all 1-on-1.",
+      "Arlene Young brings 30+ years of dental practice consulting to Southern California. Practice management, due diligence, coaching, and recruiting, all 1-on-1.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Young Dental Solutions — Dental Practice Consultant San Diego",
+        alt: "Young Dental Solutions, Dental Practice Consultant San Diego",
       },
     ],
   },

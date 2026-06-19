@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
   title: "Dental Practice Management Resources & Insights",
   description:
-    "Articles, guides, and insights on dental practice management, due diligence, coaching, and team building — from Arlene Young and Young Dental Solutions.",
+    "Articles, guides, and insights on dental practice management, due diligence, coaching, and team building, from Arlene Young and Young Dental Solutions.",
   alternates: {
     canonical: "https://youngdentalsolutions.com/blog",
   },
@@ -44,7 +44,7 @@ export default function BlogPage() {
           </h1>
           <p className="text-lg text-navy/60 leading-relaxed">
             Practical guidance on practice management, due diligence, team
-            building, and growth — from Arlene Young and 30+ years of Southern
+            building, and growth, from Arlene Young and 30+ years of Southern
             California dental practice experience.
           </p>
         </div>
@@ -72,7 +72,7 @@ export default function BlogPage() {
           </p>
           <p className="text-bg/60">
             Schedule a free consultation and get answers specific to your
-            practice — not generic advice.
+            practice, not generic advice.
           </p>
           <Link
             href="/contact"
