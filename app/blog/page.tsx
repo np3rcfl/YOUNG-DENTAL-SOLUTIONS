@@ -30,17 +30,17 @@ export default function BlogPage() {
       <div className="max-w-4xl mx-auto px-6 space-y-12">
         <div className="space-y-4">
           <nav className="text-sm text-navy/40 font-body">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+            <Link href="/" className="hover:text-navy transition-colors">Home</Link>
             <span className="mx-2">/</span>
             <span className="text-navy">Resources</span>
           </nav>
-          <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+          <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
             Resources
           </p>
           <h1 className="font-display text-5xl font-semibold text-navy">
             Dental Practice
             <br />
-            <span className="text-gold">Management Insights</span>
+            Management Insights
           </h1>
           <p className="text-lg text-navy/60 leading-relaxed">
             Practical guidance on practice management, due diligence, team
@@ -59,7 +59,7 @@ export default function BlogPage() {
           <ul className="space-y-2">
             {planned.map((title) => (
               <li key={title} className="flex items-center gap-2 text-sm text-navy/60">
-                <span className="text-gold">&#9670;</span>
+                <span className="text-navy/30">&#9670;</span>
                 {title}
               </li>
             ))}
@@ -76,7 +76,7 @@ export default function BlogPage() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy rounded-xl font-medium font-body hover:bg-gold-light transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-bg rounded-xl font-medium font-body hover:bg-navy/80 transition-colors"
           >
             Schedule Free Consultation
             <ArrowRight size={18} weight="bold" />

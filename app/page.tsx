@@ -200,16 +200,16 @@ export default function HomePage() {
       />
 
       {/* Hero */}
-      <section className="min-h-[100dvh] flex items-center pt-24 pb-16">
+      <section className="min-h-[100dvh] flex items-center pt-24 pb-16 bg-navy">
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[58%_42%] gap-12 items-center">
           <HeroText>
             <HeroTextItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-bg/50 uppercase tracking-widest">
                 Dental Practice Consulting &middot; San Diego, CA
               </p>
             </HeroTextItem>
             <HeroTextItem>
-              <h1 className="font-display text-5xl lg:text-7xl font-semibold text-navy leading-[1.05]">
+              <h1 className="font-display text-5xl lg:text-7xl font-semibold text-bg leading-[1.05]">
                 30 Years.
                 <br />
                 One Coach.
@@ -222,7 +222,7 @@ export default function HomePage() {
               </h1>
             </HeroTextItem>
             <HeroTextItem>
-              <p className="text-lg text-navy/70 max-w-xl leading-relaxed">
+              <p className="text-lg text-bg/60 max-w-xl leading-relaxed">
                 Most consultants send a playbook. Arlene picks up the phone.
                 Young Dental Solutions brings 30+ years of dental industry
                 experience and a finance background to practices across Southern
@@ -233,14 +233,14 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-gold text-navy rounded-lg font-medium font-body hover:bg-gold-light transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-bg text-navy rounded-lg font-medium font-body hover:bg-bg/90 transition-colors"
                 >
                   Schedule Free Consultation
                   <ArrowRight size={18} weight="bold" />
                 </Link>
                 <Link
                   href="/services"
-                  className="inline-flex items-center justify-center px-8 py-4 border border-navy/20 text-navy rounded-lg font-medium font-body hover:border-navy/40 transition-colors"
+                  className="inline-flex items-center justify-center px-8 py-4 border border-bg/20 text-bg rounded-lg font-medium font-body hover:border-bg/40 transition-colors"
                 >
                   See All Services
                 </Link>
@@ -249,7 +249,7 @@ export default function HomePage() {
           </HeroText>
 
           <HeroImage>
-            <div className="relative rounded-2xl overflow-hidden bg-cream border border-navy/8 p-1.5">
+            <div className="relative rounded-2xl overflow-hidden border border-bg/10 p-1.5">
               <div className="relative rounded-xl overflow-hidden aspect-[4/5]">
                 <Image
                   src="/images/arlene-young.jpg"
@@ -259,7 +259,7 @@ export default function HomePage() {
                   priority
                   sizes="(max-width: 1200px) 40vw, 480px"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/40 to-transparent" />
               </div>
             </div>
           </HeroImage>
@@ -267,19 +267,19 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar */}
-      <section className="bg-navy py-10">
+      <section className="bg-cream py-10">
         <div className="max-w-4xl mx-auto px-6">
-          <AnimatedContainer className="grid grid-cols-3 divide-x divide-bg/10 text-center">
+          <AnimatedContainer className="grid grid-cols-3 divide-x divide-navy/10 text-center">
             {[
               { stat: "30+", label: "Years in Dental Industry" },
               { stat: "4", label: "Specialized Services" },
               { stat: "SoCal", label: "Wide Service Area" },
             ].map(({ stat, label }) => (
               <AnimatedItem key={stat} className="px-6 py-4">
-                <p className="font-display text-3xl lg:text-4xl font-semibold text-gold">
+                <p className="font-display text-3xl lg:text-4xl font-semibold text-navy">
                   {stat}
                 </p>
-                <p className="text-bg/70 text-sm mt-1 font-body">{label}</p>
+                <p className="text-navy/50 text-sm mt-1 font-body">{label}</p>
               </AnimatedItem>
             ))}
           </AnimatedContainer>
@@ -291,22 +291,22 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <AnimatedContainer>
             <AnimatedItem className="space-y-6">
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 Why Arlene
               </p>
               <h2 className="font-display text-4xl lg:text-5xl font-semibold text-navy">
                 A Finance Background
                 <br />
-                <span className="text-gold">Changes Everything.</span>
+                Changes Everything.
               </h2>
-              <p className="text-navy/70 leading-relaxed">
+              <p className="text-navy/60 leading-relaxed">
                 Most dental consultants come from clinical backgrounds. Arlene
                 Young comes from finance, which means she reads your practice the
                 way a CFO reads a balance sheet. She finds the 2-3 levers that
                 actually move the needle, rather than prescribing solutions
-                designed for someone else's practice.
+                designed for someone else&rsquo;s practice.
               </p>
-              <p className="text-navy/70 leading-relaxed">
+              <p className="text-navy/60 leading-relaxed">
                 After 30+ years working across every practice type in Southern
                 California, she brings both the pattern recognition of a seasoned
                 consultant and the accountability of a personal coach. She picks
@@ -314,7 +314,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-gold font-medium font-body hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-navy font-medium font-body hover:gap-3 transition-all"
               >
                 Meet Arlene
                 <ArrowRight size={18} weight="bold" />
@@ -332,8 +332,8 @@ export default function HomePage() {
               <AnimatedItem key={text} className="mb-4">
                 <div className="flex items-start gap-4 rounded-2xl bg-cream border border-navy/8 p-1">
                   <div className="rounded-xl bg-bg border border-navy/5 p-5 flex items-start gap-4 w-full">
-                    <CheckCircle size={22} weight="fill" className="text-gold mt-0.5 shrink-0" />
-                    <p className="text-navy/80 font-body">{text}</p>
+                    <CheckCircle size={22} weight="fill" className="text-navy mt-0.5 shrink-0" />
+                    <p className="text-navy/70 font-body">{text}</p>
                   </div>
                 </div>
               </AnimatedItem>
@@ -343,16 +343,16 @@ export default function HomePage() {
       </section>
 
       {/* Services */}
-      <section className="py-24 bg-cream" id="services">
+      <section className="py-24 bg-navy" id="services">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-16 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-bg/40 uppercase tracking-widest">
                 Services
               </p>
             </AnimatedItem>
             <AnimatedItem>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-navy">
+              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-bg">
                 Four Ways We Grow Your Practice
               </h2>
             </AnimatedItem>
@@ -363,16 +363,16 @@ export default function HomePage() {
               <AnimatedItem key={href}>
                 <Link
                   href={href}
-                  className="group block rounded-2xl bg-bg border border-navy/8 p-1.5 hover:border-gold/40 hover:shadow-xl transition-all duration-300 h-full"
+                  className="group block rounded-2xl bg-bg/5 border border-bg/10 p-1.5 hover:bg-bg/10 hover:border-bg/20 hover:shadow-xl transition-all duration-300 h-full"
                 >
-                  <div className="rounded-xl bg-cream border border-navy/5 p-7 space-y-4 h-full">
-                    <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center group-hover:bg-gold/20 transition-colors">
-                      <Icon size={22} weight="duotone" className="text-gold" />
+                  <div className="rounded-xl bg-bg/5 border border-bg/8 p-7 space-y-4 h-full">
+                    <div className="w-12 h-12 rounded-xl bg-bg/10 flex items-center justify-center group-hover:bg-bg/20 transition-colors">
+                      <Icon size={22} weight="duotone" className="text-bg/70" />
                     </div>
-                    <p className="font-display text-xl font-semibold text-navy">{title}</p>
-                    <p className="text-sm font-body text-gold/80 italic">{tagline}</p>
-                    <p className="text-sm text-navy/60 leading-relaxed">{description}</p>
-                    <span className="inline-flex items-center gap-1.5 text-sm text-gold font-medium group-hover:gap-3 transition-all">
+                    <p className="font-display text-xl font-semibold text-bg">{title}</p>
+                    <p className="text-sm font-body text-gold italic">{tagline}</p>
+                    <p className="text-sm text-bg/50 leading-relaxed">{description}</p>
+                    <span className="inline-flex items-center gap-1.5 text-sm text-bg/60 font-medium group-hover:gap-3 group-hover:text-bg transition-all">
                       Learn more <ArrowRight size={14} weight="bold" />
                     </span>
                   </div>
@@ -386,38 +386,36 @@ export default function HomePage() {
       {/* Why Arlene, Counter-positioning */}
       <section className="py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="bg-navy rounded-3xl p-10 lg:p-16">
-            <AnimatedContainer className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <AnimatedItem className="space-y-6">
-                <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
-                  The Difference
-                </p>
-                <h2 className="font-display text-4xl font-semibold text-bg">
-                  You&rsquo;ve Tried Consultants.
-                  <br />
-                  <span className="text-gold">Try One Who Actually Shows Up.</span>
-                </h2>
-                <p className="text-bg/70 leading-relaxed">
-                  Dentists who&rsquo;ve worked with consultants before come to
-                  Arlene with the same story: never returned calls, sent a
-                  playbook that wasn&rsquo;t built for their practice, guaranteed
-                  30% growth and delivered chaos. That&rsquo;s not how Arlene
-                  works.
-                </p>
-              </AnimatedItem>
-              <AnimatedItem className="space-y-4">
-                {differentiators.map(({ them, us }) => (
-                  <div
-                    key={us}
-                    className="grid grid-cols-2 gap-4 p-4 rounded-xl bg-bg/5 border border-bg/10"
-                  >
-                    <p className="text-sm text-bg/40 line-through">{them}</p>
-                    <p className="text-sm text-bg/80 font-medium">{us}</p>
-                  </div>
-                ))}
-              </AnimatedItem>
-            </AnimatedContainer>
-          </div>
+          <AnimatedContainer className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <AnimatedItem className="space-y-6">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
+                The Difference
+              </p>
+              <h2 className="font-display text-4xl font-semibold text-navy">
+                You&rsquo;ve Tried Consultants.
+                <br />
+                Try One Who Actually Shows Up.
+              </h2>
+              <p className="text-navy/60 leading-relaxed">
+                Dentists who&rsquo;ve worked with consultants before come to
+                Arlene with the same story: never returned calls, sent a
+                playbook that wasn&rsquo;t built for their practice, guaranteed
+                30% growth and delivered chaos. That&rsquo;s not how Arlene
+                works.
+              </p>
+            </AnimatedItem>
+            <AnimatedItem className="space-y-4">
+              {differentiators.map(({ them, us }) => (
+                <div
+                  key={us}
+                  className="grid grid-cols-2 gap-4 p-4 rounded-xl bg-cream border border-navy/8"
+                >
+                  <p className="text-sm text-navy/30 line-through">{them}</p>
+                  <p className="text-sm text-navy/80 font-medium">{us}</p>
+                </div>
+              ))}
+            </AnimatedItem>
+          </AnimatedContainer>
         </div>
       </section>
 
@@ -426,7 +424,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-16 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 Process
               </p>
             </AnimatedItem>
@@ -441,8 +439,8 @@ export default function HomePage() {
             {steps.map(({ num, title, desc }) => (
               <AnimatedItem key={num}>
                 <div className="rounded-2xl bg-bg border border-navy/8 p-1">
-                  <div className="rounded-xl border border-navy/5 bg-cream p-8 flex gap-6">
-                    <span className="font-display text-4xl font-semibold text-gold/30 shrink-0 leading-none mt-1">
+                  <div className="rounded-xl border border-navy/5 bg-bg p-8 flex gap-6">
+                    <span className="font-display text-4xl font-semibold text-navy/15 shrink-0 leading-none mt-1">
                       {num}
                     </span>
                     <div className="space-y-2">
@@ -462,7 +460,7 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-16 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 FAQ
               </p>
             </AnimatedItem>
@@ -481,10 +479,10 @@ export default function HomePage() {
                     {q}
                     <CaretDown
                       size={20}
-                      className="shrink-0 text-gold transition-transform group-open:rotate-180"
+                      className="shrink-0 text-navy/30 transition-transform group-open:rotate-180"
                     />
                   </summary>
-                  <p className="px-6 pb-6 text-navy/70 leading-relaxed border-t border-navy/5 pt-4">
+                  <p className="px-6 pb-6 text-navy/60 leading-relaxed border-t border-navy/5 pt-4">
                     {a}
                   </p>
                 </details>
@@ -499,7 +497,7 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedContainer className="text-center space-y-6">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 Service Areas
               </p>
             </AnimatedItem>
@@ -509,7 +507,7 @@ export default function HomePage() {
               </h2>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="text-navy/60">
+              <p className="text-navy/50">
                 Young Dental Solutions works with dental practices across:
               </p>
             </AnimatedItem>
@@ -518,7 +516,7 @@ export default function HomePage() {
                 {cities.map((city) => (
                   <span
                     key={city}
-                    className="px-4 py-2 bg-bg rounded-full border border-navy/10 text-navy/70 text-sm font-body"
+                    className="px-4 py-2 bg-bg rounded-full border border-navy/12 text-navy/60 text-sm font-body"
                   >
                     {city}
                   </span>
@@ -530,18 +528,18 @@ export default function HomePage() {
       </section>
 
       {/* CTA Band */}
-      <section className="py-24">
+      <section className="py-24 bg-navy">
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedContainer className="text-center space-y-6">
             <AnimatedItem>
-              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-navy">
+              <h2 className="font-display text-4xl lg:text-5xl font-semibold text-bg">
                 Ready to Stop Guessing
                 <br />
-                <span className="text-gold">and Start Growing?</span>
+                and Start Growing?
               </h2>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="text-navy/60 text-lg max-w-xl mx-auto">
+              <p className="text-bg/50 text-lg max-w-xl mx-auto">
                 Schedule a free consultation. 30 minutes. No pitch. Just an honest
                 look at your practice and where it could go.
               </p>
@@ -549,14 +547,14 @@ export default function HomePage() {
             <AnimatedItem>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-gold text-navy rounded-xl font-medium text-lg font-body hover:bg-gold-light transition-colors"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-bg text-navy rounded-xl font-medium text-lg font-body hover:bg-bg/90 transition-colors"
               >
                 Schedule Free Consultation
                 <ArrowRight size={20} weight="bold" />
               </Link>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="text-sm text-navy/40">
+              <p className="text-sm text-bg/30">
                 858-223-9714 &middot; arlene@youngdentalsolutions.com
               </p>
             </AnimatedItem>

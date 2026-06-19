@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, CheckCircle } from "@phosphor-icons/react/dist/ssr";
@@ -89,44 +89,44 @@ export default function AboutPage() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-navy">
         <div className="max-w-6xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-[55%_45%] gap-16 items-center">
             <HeroText>
               <HeroTextItem>
-                <nav className="text-sm text-navy/40 font-body">
-                  <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+                <nav className="text-sm text-bg/40 font-body">
+                  <Link href="/" className="hover:text-bg transition-colors">Home</Link>
                   <span className="mx-2">/</span>
-                  <span className="text-navy">About</span>
+                  <span className="text-bg/70">About</span>
                 </nav>
               </HeroTextItem>
               <HeroTextItem>
-                <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+                <p className="text-sm font-body font-medium text-bg/40 uppercase tracking-widest">
                   The Coach Behind Young Dental Solutions
                 </p>
               </HeroTextItem>
               <HeroTextItem>
-                <h1 className="font-display text-5xl lg:text-6xl font-semibold text-navy leading-[1.05]">
+                <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05]">
                   30 Years.
                   <br />
-                  <span className="text-gold">No Templates.</span>
+                  No Templates.
                   <br />
                   One Practice at a Time.
                 </h1>
               </HeroTextItem>
               <HeroTextItem>
-                <p className="text-lg text-navy/70 leading-relaxed">
+                <p className="text-lg text-bg/60 leading-relaxed">
                   Arlene Young has spent more than three decades working alongside
                   dental practice owners across Southern California. Not as a
-                  vendor. Not as a report writer. As a coach, someone who stays
-                  engaged, picks up the phone, and treats your practice as a
-                  long-term relationship.
+                  vendor. Not as a report writer. As a coach who stays engaged,
+                  picks up the phone, and treats your practice as a long-term
+                  relationship.
                 </p>
               </HeroTextItem>
             </HeroText>
 
             <HeroImage>
-              <div className="relative rounded-2xl overflow-hidden bg-cream border border-navy/8 p-1.5">
+              <div className="relative rounded-2xl overflow-hidden border border-bg/10 p-1.5">
                 <div className="relative rounded-xl overflow-hidden aspect-[3/4]">
                   <Image
                     src="/images/arlene-young.jpg"
@@ -152,7 +152,7 @@ export default function AboutPage() {
                 A Finance Background That Changes How You See Your Numbers
               </h2>
             </AnimatedItem>
-            <AnimatedItem className="space-y-5 text-navy/70 leading-relaxed">
+            <AnimatedItem className="space-y-5 text-navy/60 leading-relaxed">
               <p>
                 Most dental consultants come from clinical backgrounds. They know
                 dentistry. Arlene knows dentistry too, but her lens is different.
@@ -190,7 +190,7 @@ export default function AboutPage() {
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-16 space-y-4">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 How Arlene Works
               </p>
             </AnimatedItem>
@@ -204,10 +204,10 @@ export default function AboutPage() {
           <AnimatedContainer className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {values.map(({ title, desc }) => (
               <AnimatedItem key={title}>
-                <div className="rounded-2xl bg-bg border border-navy/8 p-1.5 h-full">
-                  <div className="rounded-xl bg-cream border border-navy/5 p-8 space-y-3 h-full">
+                <div className="rounded-2xl bg-cream border border-navy/8 p-1.5 h-full">
+                  <div className="rounded-xl bg-bg border border-navy/5 p-8 space-y-3 h-full">
                     <div className="flex items-center gap-3">
-                      <CheckCircle size={22} weight="fill" className="text-gold shrink-0" />
+                      <CheckCircle size={22} weight="fill" className="text-navy/40 shrink-0" />
                       <h3 className="font-display text-xl font-semibold text-navy">{title}</h3>
                     </div>
                     <p className="text-navy/60 leading-relaxed pl-9">{desc}</p>
@@ -231,7 +231,7 @@ export default function AboutPage() {
               </blockquote>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="text-gold font-body font-medium">
+              <p className="text-bg/40 font-body font-medium">
                 Arlene Young, Young Dental Solutions
               </p>
             </AnimatedItem>
@@ -257,7 +257,7 @@ export default function AboutPage() {
             <AnimatedItem>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-gold text-navy rounded-xl font-medium text-lg font-body hover:bg-gold-light transition-colors"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-navy text-bg rounded-xl font-medium text-lg font-body hover:bg-navy/80 transition-colors"
               >
                 Schedule Free Consultation
                 <ArrowRight size={20} weight="bold" />

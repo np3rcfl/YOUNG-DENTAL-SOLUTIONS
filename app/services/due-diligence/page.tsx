@@ -85,32 +85,32 @@ export default function DueDiligencePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-navy">
         <div className="max-w-6xl mx-auto px-6">
           <HeroText>
             <HeroTextItem>
-              <nav className="text-sm text-navy/40 font-body">
-                <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <nav className="text-sm text-bg/40 font-body">
+                <Link href="/" className="hover:text-bg transition-colors">Home</Link>
                 <span className="mx-2">/</span>
-                <Link href="/services" className="hover:text-gold transition-colors">Services</Link>
+                <Link href="/services" className="hover:text-bg transition-colors">Services</Link>
                 <span className="mx-2">/</span>
-                <span className="text-navy">Due Diligence</span>
+                <span className="text-bg/70">Due Diligence</span>
               </nav>
             </HeroTextItem>
             <HeroTextItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 Due Diligence
               </p>
             </HeroTextItem>
             <HeroTextItem>
-              <h1 className="font-display text-5xl lg:text-6xl font-semibold text-navy leading-[1.05] max-w-3xl">
+              <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05] max-w-3xl">
                 Before You Sign on a Practice,
                 <br />
-                <span className="text-gold">Know What You&rsquo;re Actually Buying.</span>
+                <span className="text-navy/40">Know What You&rsquo;re Actually Buying.</span>
               </h1>
             </HeroTextItem>
             <HeroTextItem>
-              <p className="text-lg text-navy/70 leading-relaxed max-w-2xl">
+              <p className="text-lg text-bg/60 leading-relaxed max-w-2xl">
                 Acquiring a dental practice is one of the most significant
                 financial commitments of your career. Arlene Young&rsquo;s due
                 diligence analysis gives you an independent, finance-first view of
@@ -121,7 +121,7 @@ export default function DueDiligencePage() {
             <HeroTextItem>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy rounded-lg font-medium font-body hover:bg-gold-light transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-navy text-bg rounded-lg font-medium font-body hover:bg-navy/80 transition-colors"
               >
                 Schedule a Consultation
                 <ArrowRight size={18} weight="bold" />
@@ -136,7 +136,7 @@ export default function DueDiligencePage() {
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="space-y-4 mb-12">
             <AnimatedItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                 What We Review
               </p>
             </AnimatedItem>
@@ -155,7 +155,7 @@ export default function DueDiligencePage() {
                 <div className="rounded-2xl bg-bg border border-navy/8 p-1 h-full">
                   <div className="rounded-xl bg-cream border border-navy/5 p-6 space-y-3 h-full">
                     <div className="flex items-center gap-2">
-                      <CheckCircle size={18} weight="fill" className="text-gold shrink-0" />
+                      <CheckCircle size={18} weight="fill" className="text-navy/40 shrink-0" />
                       <h3 className="font-display font-semibold text-navy">{label}</h3>
                     </div>
                     <p className="text-sm text-navy/60 leading-relaxed">{desc}</p>
@@ -190,7 +190,7 @@ export default function DueDiligencePage() {
                   <AnimatedItem key={flag}>
                     <div className="rounded-2xl bg-cream border border-navy/8 p-1">
                       <div className="rounded-xl bg-bg border border-navy/5 p-4 flex items-start gap-3">
-                        <Warning size={18} weight="fill" className="text-gold mt-0.5 shrink-0" />
+                        <Warning size={18} weight="fill" className="text-navy/40 mt-0.5 shrink-0" />
                         <p className="text-sm text-navy/70">{flag}</p>
                       </div>
                     </div>
@@ -208,7 +208,7 @@ export default function DueDiligencePage() {
                   <ul className="space-y-4">
                     {walkAwayWith.map((item) => (
                       <li key={item} className="flex items-start gap-3">
-                        <CheckCircle size={18} weight="fill" className="text-gold mt-0.5 shrink-0" />
+                        <CheckCircle size={18} weight="fill" className="text-navy/40 mt-0.5 shrink-0" />
                         <p className="text-sm text-bg/80">{item}</p>
                       </li>
                     ))}
@@ -217,13 +217,13 @@ export default function DueDiligencePage() {
               </AnimatedItem>
 
               <AnimatedItem>
-                <blockquote className="p-6 bg-cream rounded-xl border-l-4 border-gold">
+                <blockquote className="p-6 bg-cream rounded-xl border-l-4 border-navy/20">
                   <p className="text-navy/70 italic leading-relaxed">
                     &ldquo;The goal isn&rsquo;t to talk you out of the deal. It&rsquo;s to make
                     sure you know exactly what you&rsquo;re getting into, so if you
                     proceed, you do it with your eyes open.&rdquo;
                   </p>
-                  <p className="text-gold font-medium mt-3 text-sm">Arlene Young</p>
+                  <p className="text-navy/40 font-medium mt-3 text-sm">Arlene Young</p>
                 </blockquote>
               </AnimatedItem>
             </AnimatedContainer>
@@ -239,7 +239,7 @@ export default function DueDiligencePage() {
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Buying a Practice Soon?
                 <br />
-                <span className="text-gold">Let&rsquo;s Talk Before You Sign.</span>
+                Let&rsquo;s Talk Before You Sign.
               </h2>
             </AnimatedItem>
             <AnimatedItem>
@@ -252,7 +252,7 @@ export default function DueDiligencePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy rounded-xl font-medium font-body hover:bg-gold-light transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-bg text-navy rounded-xl font-medium font-body hover:bg-bg/90 transition-colors"
                 >
                   Schedule Consultation
                   <ArrowRight size={18} weight="bold" />

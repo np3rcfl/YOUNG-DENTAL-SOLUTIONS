@@ -47,7 +47,7 @@ export default function ContactPage() {
       <section className="pt-32 pb-16">
         <div className="max-w-6xl mx-auto px-6">
           <nav className="text-sm text-navy/40 font-body mb-8">
-            <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+            <Link href="/" className="hover:text-navy transition-colors">Home</Link>
             <span className="mx-2">/</span>
             <span className="text-navy">Contact</span>
           </nav>
@@ -56,13 +56,13 @@ export default function ContactPage() {
             {/* Left, Info */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+                <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                   Get in Touch
                 </p>
                 <h1 className="font-display text-5xl lg:text-6xl font-semibold text-navy leading-[1.1]">
                   Let&rsquo;s Talk About
                   <br />
-                  <span className="text-gold">Your Practice.</span>
+                  <span className="text-navy/40">Your Practice.</span>
                 </h1>
                 <p className="text-lg text-navy/70 leading-relaxed">
                   Schedule a free 30-minute consultation. Arlene will listen to
@@ -74,10 +74,10 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <a
                   href="tel:+18582239714"
-                  className="flex items-center gap-4 p-5 bg-cream rounded-xl border border-navy/5 hover:border-gold/30 transition-colors group"
+                  className="flex items-center gap-4 p-5 bg-cream rounded-xl border border-navy/5 hover:border-navy/20 transition-colors group"
                 >
-                  <div className="p-3 bg-gold/10 rounded-lg group-hover:bg-gold/20 transition-colors">
-                    <Phone size={22} weight="duotone" className="text-gold" />
+                  <div className="p-3 bg-navy/6 rounded-lg group-hover:bg-navy/10 transition-colors">
+                    <Phone size={22} weight="duotone" className="text-navy/40" />
                   </div>
                   <div>
                     <p className="text-xs font-body text-navy/40 uppercase tracking-wider mb-0.5">Phone</p>
@@ -87,10 +87,10 @@ export default function ContactPage() {
 
                 <a
                   href="mailto:arlene@youngdentalsolutions.com"
-                  className="flex items-center gap-4 p-5 bg-cream rounded-xl border border-navy/5 hover:border-gold/30 transition-colors group"
+                  className="flex items-center gap-4 p-5 bg-cream rounded-xl border border-navy/5 hover:border-navy/20 transition-colors group"
                 >
-                  <div className="p-3 bg-gold/10 rounded-lg group-hover:bg-gold/20 transition-colors">
-                    <Envelope size={22} weight="duotone" className="text-gold" />
+                  <div className="p-3 bg-navy/6 rounded-lg group-hover:bg-navy/10 transition-colors">
+                    <Envelope size={22} weight="duotone" className="text-navy/40" />
                   </div>
                   <div>
                     <p className="text-xs font-body text-navy/40 uppercase tracking-wider mb-0.5">Email</p>
@@ -99,8 +99,8 @@ export default function ContactPage() {
                 </a>
 
                 <div className="flex items-center gap-4 p-5 bg-cream rounded-xl border border-navy/5">
-                  <div className="p-3 bg-gold/10 rounded-lg">
-                    <MapPin size={22} weight="duotone" className="text-gold" />
+                  <div className="p-3 bg-navy/6 rounded-lg">
+                    <MapPin size={22} weight="duotone" className="text-navy/40" />
                   </div>
                   <div>
                     <p className="text-xs font-body text-navy/40 uppercase tracking-wider mb-0.5">Location</p>
@@ -119,7 +119,7 @@ export default function ContactPage() {
                     href="https://www.instagram.com/youngdentalsolutions/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-navy/60 hover:text-gold transition-colors text-sm"
+                    className="flex items-center gap-2 text-navy/60 hover:text-navy transition-colors text-sm"
                   >
                     <InstagramLogo size={20} />
                     @youngdentalsolutions
@@ -128,7 +128,7 @@ export default function ContactPage() {
                     href="https://www.linkedin.com/in/arlene-young-dental/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-navy/60 hover:text-gold transition-colors text-sm"
+                    className="flex items-center gap-2 text-navy/60 hover:text-navy transition-colors text-sm"
                   >
                     <LinkedinLogo size={20} />
                     LinkedIn
@@ -180,7 +180,7 @@ export default function ContactPage() {
                       type="text"
                       required
                       placeholder="Dr. Jane Smith"
-                      className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold text-sm"
+                      className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-navy/40 text-sm"
                     />
                   </div>
                   <div className="space-y-1.5">
@@ -192,7 +192,7 @@ export default function ContactPage() {
                       name="phone"
                       type="tel"
                       placeholder="(619) 555-0100"
-                      className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold text-sm"
+                      className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-navy/40 text-sm"
                     />
                   </div>
                 </div>
@@ -207,7 +207,7 @@ export default function ContactPage() {
                     type="email"
                     required
                     placeholder="you@yourpractice.com"
-                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold text-sm"
+                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-navy/40 text-sm"
                   />
                 </div>
 
@@ -220,7 +220,7 @@ export default function ContactPage() {
                     name="practice"
                     type="text"
                     placeholder="Sunshine Dental, San Diego, CA"
-                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold text-sm"
+                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-navy/40 text-sm"
                   />
                 </div>
 
@@ -231,7 +231,7 @@ export default function ContactPage() {
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy focus:outline-none focus:border-gold text-sm appearance-none"
+                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy focus:outline-none focus:border-navy/40 text-sm appearance-none"
                   >
                     <option value="">Select a service</option>
                     <option value="practice-management">Practice Management Analysis</option>
@@ -251,13 +251,13 @@ export default function ContactPage() {
                     name="message"
                     rows={4}
                     placeholder="What's your biggest challenge right now? What would a win look like for you?"
-                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-gold text-sm resize-none"
+                    className="w-full px-4 py-3 bg-bg border border-navy/15 rounded-lg text-navy placeholder:text-navy/30 focus:outline-none focus:border-navy/40 text-sm resize-none"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-4 bg-gold text-navy rounded-lg font-medium font-body hover:bg-gold-light transition-colors"
+                  className="w-full py-4 bg-navy text-bg rounded-lg font-medium font-body hover:bg-navy/80 transition-colors"
                 >
                   Send Message
                 </button>

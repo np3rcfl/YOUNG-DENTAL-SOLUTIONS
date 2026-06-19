@@ -43,13 +43,13 @@ export default function Nav() {
         <nav
           className={`flex items-center justify-between px-6 py-3 rounded-full transition-all duration-300 ${
             scrolled
-              ? "bg-navy/95 backdrop-blur-md shadow-xl"
-              : "bg-navy/80 backdrop-blur-sm"
+              ? "bg-navy/97 backdrop-blur-md shadow-xl"
+              : "bg-navy/90 backdrop-blur-sm"
           }`}
         >
           <Link
             href="/"
-            className="font-display text-bg font-semibold text-lg tracking-tight hover:text-gold transition-colors"
+            className="font-display text-bg font-semibold text-lg tracking-tight hover:text-bg/80 transition-colors"
           >
             Young Dental Solutions
           </Link>
@@ -61,8 +61,8 @@ export default function Nav() {
                   href={href}
                   className={`text-sm font-body font-medium transition-colors ${
                     pathname === href
-                      ? "text-gold"
-                      : "text-bg/80 hover:text-bg"
+                      ? "text-bg"
+                      : "text-bg/60 hover:text-bg"
                   }`}
                 >
                   {label}
@@ -73,7 +73,7 @@ export default function Nav() {
 
           <Link
             href="/contact"
-            className="hidden md:inline-flex items-center px-5 py-2 rounded-full bg-gold text-navy text-sm font-medium font-body hover:bg-gold-light transition-colors"
+            className="hidden md:inline-flex items-center px-5 py-2 rounded-full border border-bg/30 text-bg text-sm font-medium font-body hover:border-bg/60 hover:bg-bg/10 transition-colors"
           >
             Free Consultation
           </Link>
@@ -95,7 +95,7 @@ export default function Nav() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[60] bg-navy flex flex-col"
+            className="fixed inset-0 z-[60] bg-navy flex flex-col overflow-auto"
           >
             <div className="flex items-center justify-between px-6 py-6">
               <Link
@@ -124,7 +124,7 @@ export default function Nav() {
                   <Link
                     href={href}
                     className={`font-display text-4xl font-semibold transition-colors ${
-                      pathname === href ? "text-gold" : "text-bg hover:text-gold"
+                      pathname === href ? "text-bg" : "text-bg/60 hover:text-bg"
                     }`}
                   >
                     {label}
@@ -136,7 +136,7 @@ export default function Nav() {
             <div className="mt-auto px-6 pb-12">
               <Link
                 href="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-full bg-gold text-navy font-medium text-lg"
+                className="inline-flex items-center px-8 py-4 rounded-full border border-bg/30 text-bg font-medium text-lg hover:bg-bg/10 transition-colors"
                 onClick={() => setOpen(false)}
               >
                 Free Consultation

@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <section className="min-h-[100dvh] flex items-center justify-center pt-24">
       <div className="max-w-lg mx-auto px-6 text-center space-y-6">
-        <p className="font-display text-7xl font-semibold text-gold">404</p>
+        <p className="font-display text-7xl font-semibold text-navy">404</p>
         <h1 className="font-display text-3xl font-semibold text-navy">
           This Page Doesn&rsquo;t Exist
         </h1>
@@ -16,7 +16,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy rounded-lg font-medium font-body hover:bg-gold-light transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-bg rounded-lg font-medium font-body hover:bg-navy/80 transition-colors"
           >
             Go Home <ArrowRight size={16} weight="bold" />
           </Link>

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ChartLineUp, MagnifyingGlass, Handshake, UsersThree, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { HeroText, HeroTextItem } from "@/components/HomeAnimations";
@@ -159,30 +159,30 @@ export default function ServicesPage() {
       />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 text-center">
+      <section className="pt-32 pb-16 text-center bg-navy">
         <div className="max-w-3xl mx-auto px-6">
           <HeroText>
             <HeroTextItem>
-              <nav className="text-sm text-navy/40 font-body">
-                <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <nav className="text-sm text-bg/40 font-body">
+                <Link href="/" className="hover:text-bg transition-colors">Home</Link>
                 <span className="mx-2">/</span>
-                <span className="text-navy">Services</span>
+                <span className="text-bg/70">Services</span>
               </nav>
             </HeroTextItem>
             <HeroTextItem>
-              <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+              <p className="text-sm font-body font-medium text-bg/40 uppercase tracking-widest">
                 Services
               </p>
             </HeroTextItem>
             <HeroTextItem>
-              <h1 className="font-display text-5xl lg:text-6xl font-semibold text-navy">
+              <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg">
                 Four Ways We
                 <br />
-                <span className="text-gold">Grow Your Practice</span>
+                Grow Your Practice
               </h1>
             </HeroTextItem>
             <HeroTextItem>
-              <p className="text-lg text-navy/60 leading-relaxed">
+              <p className="text-lg text-bg/50 leading-relaxed">
                 Every service is delivered 1-on-1 by Arlene Young. No associates,
                 no templates, no playbooks designed for someone else&rsquo;s practice.
               </p>
@@ -192,28 +192,28 @@ export default function ServicesPage() {
       </section>
 
       {/* Services List */}
-      <section className="pb-24">
+      <section className="py-16">
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="space-y-5">
             {services.map(({ icon: Icon, title, tagline, description, outcomes, href }) => (
               <AnimatedItem key={href}>
-                <div className="rounded-2xl bg-bg border border-navy/8 p-1.5">
-                  <div className="rounded-xl bg-cream border border-navy/5 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8">
+                <div className="rounded-2xl bg-cream border border-navy/8 p-1.5">
+                  <div className="rounded-xl bg-bg border border-navy/5 p-8 lg:p-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-8">
                     <div className="space-y-5">
                       <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center">
-                          <Icon size={22} weight="duotone" className="text-gold" />
+                        <div className="w-12 h-12 rounded-xl bg-navy/6 flex items-center justify-center">
+                          <Icon size={22} weight="duotone" className="text-navy/50" />
                         </div>
                         <div>
                           <h2 className="font-display text-2xl font-semibold text-navy">{title}</h2>
-                          <p className="text-gold text-sm italic mt-0.5">{tagline}</p>
+                          <p className="text-navy/40 text-sm italic mt-0.5">{tagline}</p>
                         </div>
                       </div>
-                      <p className="text-navy/70 leading-relaxed">{description}</p>
+                      <p className="text-navy/60 leading-relaxed">{description}</p>
                       <ul className="space-y-2">
                         {outcomes.map((o) => (
-                          <li key={o} className="flex items-start gap-3 text-sm text-navy/60">
-                            <span className="text-gold mt-1.5 text-xs">&#9670;</span>
+                          <li key={o} className="flex items-start gap-3 text-sm text-navy/50">
+                            <span className="text-navy/30 mt-1.5 text-xs">&#9670;</span>
                             {o}
                           </li>
                         ))}
@@ -222,7 +222,7 @@ export default function ServicesPage() {
                     <div className="flex items-end">
                       <Link
                         href={href}
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gold text-navy rounded-lg font-medium font-body hover:bg-gold-light transition-colors whitespace-nowrap"
+                        className="inline-flex items-center gap-2 px-6 py-3 bg-navy text-bg rounded-lg font-medium font-body hover:bg-navy/80 transition-colors whitespace-nowrap"
                       >
                         Learn More
                         <ArrowRight size={16} weight="bold" />
@@ -244,11 +244,11 @@ export default function ServicesPage() {
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Not Sure Which Service
                 <br />
-                <span className="text-gold">Is Right for Your Practice?</span>
+                Is Right for Your Practice?
               </h2>
             </AnimatedItem>
             <AnimatedItem>
-              <p className="text-bg/60 text-lg">
+              <p className="text-bg/50 text-lg">
                 Schedule a free consultation. Arlene will listen to your situation
                 and recommend only what actually makes sense.
               </p>
@@ -256,7 +256,7 @@ export default function ServicesPage() {
             <AnimatedItem>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-10 py-5 bg-gold text-navy rounded-xl font-medium text-lg font-body hover:bg-gold-light transition-colors"
+                className="inline-flex items-center gap-2 px-10 py-5 bg-bg text-navy rounded-xl font-medium text-lg font-body hover:bg-bg/90 transition-colors"
               >
                 Schedule Free Consultation
                 <ArrowRight size={20} weight="bold" />

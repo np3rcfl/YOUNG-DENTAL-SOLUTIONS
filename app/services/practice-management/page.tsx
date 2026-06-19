@@ -78,16 +78,16 @@ export default function PracticeManagementPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
-      <section className="pt-32 pb-16">
+      <section className="pt-32 pb-16 bg-navy">
         <div className="max-w-6xl mx-auto px-6">
           <HeroText>
             <HeroTextItem>
-              <nav className="text-sm text-navy/40 font-body">
-                <Link href="/" className="hover:text-gold transition-colors">Home</Link>
+              <nav className="text-sm text-bg/40 font-body">
+                <Link href="/" className="hover:text-bg transition-colors">Home</Link>
                 <span className="mx-2">/</span>
-                <Link href="/services" className="hover:text-gold transition-colors">Services</Link>
+                <Link href="/services" className="hover:text-bg transition-colors">Services</Link>
                 <span className="mx-2">/</span>
-                <span className="text-navy">Practice Management</span>
+                <span className="text-bg/70">Practice Management</span>
               </nav>
             </HeroTextItem>
           </HeroText>
@@ -95,22 +95,22 @@ export default function PracticeManagementPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-16 items-center mt-8">
             <HeroText>
               <HeroTextItem>
-                <p className="text-sm font-body font-medium text-gold uppercase tracking-widest">
+                <p className="text-sm font-body font-medium text-navy/40 uppercase tracking-widest">
                   Practice Management
                 </p>
               </HeroTextItem>
               <HeroTextItem>
-                <h1 className="font-display text-5xl lg:text-6xl font-semibold text-navy leading-[1.05]">
+                <h1 className="font-display text-5xl lg:text-6xl font-semibold text-bg leading-[1.05]">
                   Your Practice Metrics
                   <br />
                   Are Telling a Story.
                   <br />
-                  <span className="text-gold">Let&rsquo;s Find Out
+                  <span className="text-navy/40">Let&rsquo;s Find Out
                   <br />What It Says.</span>
                 </h1>
               </HeroTextItem>
               <HeroTextItem>
-                <p className="text-lg text-navy/70 leading-relaxed">
+                <p className="text-lg text-bg/60 leading-relaxed">
                   Arlene Young analyzes your scheduling, billing, overhead, and
                   team dynamics, not to write a report, but to hand you a ranked
                   list of changes that will move the needle. Built for your
@@ -120,8 +120,7 @@ export default function PracticeManagementPage() {
               <HeroTextItem>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy rounded-lg font-medium font-body hover:bg-gold-light transition-colors"
-                >
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-bg text-navy rounded-lg font-medium font-body hover:bg-bg/90 transition-colors">
                   Schedule Free Consultation
                   <ArrowRight size={18} weight="bold" />
                 </Link>
@@ -129,7 +128,7 @@ export default function PracticeManagementPage() {
             </HeroText>
 
             <HeroImage>
-              <div className="relative rounded-2xl overflow-hidden bg-cream border border-navy/8 p-1.5">
+              <div className="relative rounded-2xl overflow-hidden border border-bg/10 p-1.5">
                 <div className="relative rounded-xl overflow-hidden aspect-square">
                   <Image
                     src="/images/practice-management.jpg"
@@ -160,7 +159,7 @@ export default function PracticeManagementPage() {
                   <AnimatedItem key={s}>
                     <div className="rounded-2xl bg-bg border border-navy/8 p-1">
                       <div className="rounded-xl bg-cream border border-navy/5 p-4 flex items-start gap-3">
-                        <span className="text-gold mt-1.5 text-xs shrink-0">&#9670;</span>
+                        <span className="text-navy/20 mt-1.5 text-xs shrink-0">&#9670;</span>
                         <p className="text-navy/70">{s}</p>
                       </div>
                     </div>
@@ -178,7 +177,7 @@ export default function PracticeManagementPage() {
               <div className="space-y-4">
                 {deliverables.map((d) => (
                   <AnimatedItem key={d} className="flex items-start gap-3">
-                    <CheckCircle size={20} weight="fill" className="text-gold mt-0.5 shrink-0" />
+                    <CheckCircle size={20} weight="fill" className="text-navy/40 mt-0.5 shrink-0" />
                     <p className="text-navy/70">{d}</p>
                   </AnimatedItem>
                 ))}
@@ -228,7 +227,7 @@ export default function PracticeManagementPage() {
               <h2 className="font-display text-4xl font-semibold text-bg">
                 Ready to See What&rsquo;s
                 <br />
-                <span className="text-gold">Actually Holding You Back?</span>
+                Actually Holding You Back?
               </h2>
             </AnimatedItem>
             <AnimatedItem>
@@ -241,7 +240,7 @@ export default function PracticeManagementPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gold text-navy rounded-xl font-medium font-body hover:bg-gold-light transition-colors"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-bg text-navy rounded-xl font-medium font-body hover:bg-bg/90 transition-colors"
                 >
                   Schedule Free Consultation
                   <ArrowRight size={18} weight="bold" />
