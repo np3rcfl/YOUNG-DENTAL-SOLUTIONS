@@ -24,6 +24,9 @@
     background-color: #FDFCF7;
     color: #1A1A26;
     font-family: var(--font-body);
+    /* subtle warm gradient on scroll bg so bare body never shows flat white */
+    background-image: linear-gradient(180deg, #FDFCF7 0%, #F8F4EC 100%);
+    background-attachment: fixed;
   }
 
   /* Film grain overlay — fixed, pointer-events-none, never on scroll containers */

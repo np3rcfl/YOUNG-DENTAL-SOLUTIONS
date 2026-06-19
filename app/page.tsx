@@ -165,9 +165,12 @@ export default function HomePage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="min-h-[100dvh] flex items-center pt-28 pb-20 bg-navy overflow-hidden">
+      <section
+        className="min-h-[100dvh] flex items-center pt-24 pb-14 overflow-hidden"
+        style={{ background: "radial-gradient(ellipse at 75% 15%, #221D35 0%, #1A1A26 45%, #111019 100%)" }}
+      >
         <div className="max-w-[1200px] mx-auto px-6 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] gap-10 xl:gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] gap-8 xl:gap-14 items-center">
 
             {/* Left: Text */}
             <HeroText>
@@ -178,15 +181,14 @@ export default function HomePage() {
               </HeroTextItem>
 
               <HeroTextItem>
-                <h1 className="font-display text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem] xl:text-[5.5rem] font-light text-bg leading-[0.98] tracking-[-0.02em]">
+                <h1 className="font-display text-[2.75rem] md:text-[3.5rem] lg:text-[3.75rem] xl:text-[4.25rem] font-light text-bg leading-[1.0] tracking-[-0.02em]">
                   30 Years.
                   <br />
                   One Coach.
                   <br />
                   <em className="text-gold" style={{ fontStyle: "italic" }}>
                     Your Practice,
-                  </em>
-                  <br />
+                  </em>{" "}
                   Finally Running
                   <br />
                   Like a Business.
@@ -272,13 +274,17 @@ export default function HomePage() {
 
                 {/* Floating location card — top right */}
                 <div
-                  className="absolute -top-3 -right-3 rounded-xl bg-navy/96 backdrop-blur-sm border border-bg/10 shadow-xl px-4 py-3"
-                  style={{ transform: "rotate(1.5deg)" }}
+                  className="absolute -top-3 -right-3 rounded-xl backdrop-blur-sm shadow-xl px-4 py-3 border"
+                  style={{
+                    transform: "rotate(1.5deg)",
+                    background: "rgba(253,252,247,0.96)",
+                    borderColor: "rgba(26,26,38,0.12)",
+                  }}
                 >
-                  <p className="text-[10px] text-bg/45 font-body uppercase tracking-wider">
+                  <p className="text-[10px] text-navy/45 font-body uppercase tracking-wider">
                     Service Area
                   </p>
-                  <p className="text-xs text-bg/80 font-body font-medium mt-0.5">
+                  <p className="text-xs text-navy/80 font-body font-medium mt-0.5">
                     Southern California
                   </p>
                 </div>
@@ -289,7 +295,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── TRUST BAR ─── */}
-      <section className="bg-cream py-12">
+      <section className="py-12" style={{ background: "linear-gradient(180deg, #E8E3D8 0%, #EDE9DF 100%)" }}>
         <div className="max-w-4xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-3 divide-x divide-navy/10">
             {[
@@ -310,8 +316,37 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ─── EDITORIAL PULL QUOTE ─── */}
+      <section className="py-24 overflow-hidden" style={{ background: "linear-gradient(160deg, #F4F0E6 0%, #FDFCF7 100%)" }}>
+        <div className="max-w-6xl mx-auto px-6">
+          <AnimatedContainer>
+            <AnimatedItem>
+              <blockquote className="relative">
+                <span
+                  className="absolute -top-10 -left-6 font-display leading-none select-none pointer-events-none"
+                  aria-hidden="true"
+                  style={{ fontSize: "14rem", color: "rgba(26,26,38,0.055)", lineHeight: 1 }}
+                >
+                  &ldquo;
+                </span>
+                <p className="font-display text-[2rem] md:text-[2.75rem] lg:text-[3.25rem] font-light text-navy leading-[1.18] italic max-w-4xl relative z-10 tracking-[-0.01em]">
+                  Most consultants send a playbook and move on.
+                  I stay until the practice actually changes.
+                </p>
+                <footer className="mt-8 flex items-center gap-4">
+                  <div className="w-10 h-px bg-gold" />
+                  <p className="font-body text-sm text-navy/55 tracking-wide">
+                    Arlene Young &mdash; Founder, Young Dental Solutions
+                  </p>
+                </footer>
+              </blockquote>
+            </AnimatedItem>
+          </AnimatedContainer>
+        </div>
+      </section>
+
       {/* ─── ABOUT PREVIEW ─── */}
-      <section className="py-32">
+      <section className="py-32" style={{ background: "linear-gradient(155deg, #FDFCF7 0%, #F4F0E6 55%, #EDE9DF 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <AnimatedContainer>
             <AnimatedItem className="space-y-7">
@@ -377,7 +412,11 @@ export default function HomePage() {
       </section>
 
       {/* ─── SERVICES BENTO ─── */}
-      <section className="py-32 bg-navy" id="services">
+      <section
+        className="py-32"
+        id="services"
+        style={{ background: "radial-gradient(ellipse at 20% 80%, #221D35 0%, #1A1A26 50%, #111019 100%)" }}
+      >
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="mb-14 space-y-4">
             <AnimatedItem>
@@ -553,7 +592,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── COUNTER-POSITIONING ─── */}
-      <section className="py-32">
+      <section className="py-32" style={{ background: "linear-gradient(160deg, #FDFCF7 0%, #F6F2EA 100%)" }}>
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <AnimatedItem className="space-y-7">
@@ -572,29 +611,41 @@ export default function HomePage() {
                 delivered chaos.
               </p>
             </AnimatedItem>
-            <AnimatedItem className="space-y-3">
-              {differentiators.map(({ them, us }) => (
-                <div
-                  key={us}
-                  className="rounded-2xl bg-cream border border-navy/8 p-1"
-                >
-                  <div className="rounded-[calc(1rem-0.25rem)] bg-bg border border-navy/5 grid grid-cols-2 gap-4 p-5">
-                    <p className="text-sm text-navy/25 line-through leading-relaxed font-body">
-                      {them}
-                    </p>
-                    <p className="text-sm text-navy/75 font-medium leading-relaxed font-body">
-                      {us}
-                    </p>
+            <AnimatedItem>
+              {/* Column headers */}
+              <div className="grid grid-cols-2 gap-4 mb-3 px-1">
+                <p className="text-[10px] font-body font-medium text-navy/30 uppercase tracking-[0.2em]">
+                  The usual
+                </p>
+                <p className="text-[10px] font-body font-medium text-gold uppercase tracking-[0.2em]">
+                  With Arlene
+                </p>
+              </div>
+              <div className="space-y-2">
+                {differentiators.map(({ them, us }) => (
+                  <div
+                    key={us}
+                    className="rounded-2xl border border-navy/8 p-px overflow-hidden"
+                    style={{ background: "linear-gradient(160deg, #F4F0E6 0%, #FDFCF7 100%)" }}
+                  >
+                    <div className="rounded-[calc(1rem-0.0625rem)] bg-bg/70 grid grid-cols-2 divide-x divide-navy/8">
+                      <p className="text-sm text-navy/30 leading-relaxed font-body p-5 pr-4 line-through decoration-navy/15">
+                        {them}
+                      </p>
+                      <p className="text-sm text-navy/80 font-medium leading-relaxed font-body p-5 pl-4">
+                        {us}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </AnimatedItem>
           </AnimatedContainer>
         </div>
       </section>
 
       {/* ─── HOW IT WORKS ─── */}
-      <section className="py-32 bg-cream">
+      <section className="py-32" style={{ background: "linear-gradient(170deg, #E8E3D8 0%, #EDE9DF 50%, #E4DFD4 100%)" }}>
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-14 space-y-4">
             <AnimatedItem>
@@ -607,32 +658,38 @@ export default function HomePage() {
             </AnimatedItem>
           </AnimatedContainer>
 
-          <AnimatedContainer className="space-y-4">
+          <AnimatedContainer className="relative">
+            {/* Connecting line */}
+            <div className="absolute left-7 top-8 bottom-8 w-px bg-navy/10 hidden sm:block" aria-hidden="true" />
+            <div className="space-y-3">
             {steps.map(({ num, title, desc }) => (
               <AnimatedItem key={num}>
-                <div className="rounded-2xl bg-bg border border-navy/8 p-1">
-                  <div className="rounded-[calc(1rem-0.25rem)] bg-bg border border-navy/5 px-7 py-7 flex gap-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]">
-                    <span className="font-display text-5xl font-light text-navy/12 shrink-0 leading-none mt-1.5">
+                <div className="relative flex gap-6 items-start px-0 py-2">
+                  {/* Step number bubble */}
+                  <div className="relative z-10 shrink-0 w-14 h-14 rounded-full bg-bg border border-navy/12 flex items-center justify-center shadow-sm">
+                    <span className="font-display text-lg font-medium text-navy/50 leading-none">
                       {num}
                     </span>
-                    <div className="space-y-2">
-                      <h3 className="font-display text-xl font-medium text-navy">
-                        {title}
-                      </h3>
-                      <p className="text-navy/55 leading-relaxed font-body text-sm">
-                        {desc}
-                      </p>
-                    </div>
+                  </div>
+                  {/* Content */}
+                  <div className="flex-1 pt-3.5 pb-6 space-y-2 border-b border-navy/8 last:border-0">
+                    <h3 className="font-display text-xl font-medium text-navy">
+                      {title}
+                    </h3>
+                    <p className="text-navy/55 leading-relaxed font-body text-sm">
+                      {desc}
+                    </p>
                   </div>
                 </div>
               </AnimatedItem>
             ))}
+            </div>
           </AnimatedContainer>
         </div>
       </section>
 
       {/* ─── FAQ ─── */}
-      <section className="py-32" id="faq">
+      <section className="py-32" id="faq" style={{ background: "linear-gradient(180deg, #F8F5ED 0%, #FDFCF7 100%)" }}>
         <div className="max-w-3xl mx-auto px-6">
           <AnimatedContainer className="text-center mb-14 space-y-4">
             <AnimatedItem>
@@ -667,23 +724,27 @@ export default function HomePage() {
       </section>
 
       {/* ─── SERVICE AREAS ─── */}
-      <section className="py-20 bg-cream">
-        <div className="max-w-3xl mx-auto px-6">
-          <AnimatedContainer className="text-center space-y-6">
-            <AnimatedItem>
+      <section className="py-20" style={{ background: "linear-gradient(135deg, #E4DFD4 0%, #EDE9DF 100%)" }}>
+        <div className="max-w-5xl mx-auto px-6">
+          <AnimatedContainer className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <AnimatedItem className="space-y-4">
               <span className="eyebrow">Service Areas</span>
-            </AnimatedItem>
-            <AnimatedItem>
-              <h2 className="font-display text-3xl lg:text-4xl font-light text-navy">
-                Serving Southern California
+              <h2 className="font-display text-3xl lg:text-4xl font-light text-navy leading-[1.05]">
+                Serving Southern
+                <br />
+                <em style={{ fontStyle: "italic" }} className="text-gold">California</em>
               </h2>
+              <p className="text-navy/55 font-body text-sm leading-relaxed">
+                On-site or remote engagements across San Diego County, LA, and beyond.
+              </p>
             </AnimatedItem>
             <AnimatedItem>
-              <div className="flex flex-wrap justify-center gap-2.5">
+              <div className="flex flex-wrap gap-2">
                 {cities.map((city) => (
                   <span
                     key={city}
-                    className="px-4 py-2 bg-bg rounded-full border border-navy/10 text-navy/55 text-xs font-body tracking-wide"
+                    className="px-4 py-2.5 rounded-xl border border-navy/12 text-navy/60 text-xs font-body tracking-wide font-medium"
+                    style={{ background: "rgba(253,252,247,0.7)" }}
                   >
                     {city}
                   </span>

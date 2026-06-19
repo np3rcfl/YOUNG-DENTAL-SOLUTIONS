@@ -12,7 +12,10 @@ export default function Footer() {
   return (
     <footer>
       {/* Editorial CTA band */}
-      <div className="bg-navy py-24 px-6">
+      <div
+        className="py-24 px-6"
+        style={{ background: "radial-gradient(ellipse at 50% 0%, #221D35 0%, #1A1A26 55%, #111019 100%)" }}
+      >
         <div className="max-w-6xl mx-auto">
           <div className="rounded-[2.5rem] bg-bg/4 border border-bg/8 p-2">
             <div className="rounded-[calc(2.5rem-0.5rem)] bg-bg/4 border border-bg/6 px-10 py-14 md:px-16 md:py-20 flex flex-col md:flex-row items-start md:items-center justify-between gap-10">
@@ -50,7 +53,7 @@ export default function Footer() {
       </div>
 
       {/* Main footer grid */}
-      <div className="bg-cream">
+      <div style={{ background: "linear-gradient(180deg, #EDE9DF 0%, #E8E3D8 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 py-14 grid grid-cols-1 md:grid-cols-3 gap-10">
           <div className="space-y-5">
             <p className="font-display text-navy font-semibold text-xl tracking-tight">
@@ -135,7 +138,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="bg-navy">
+      <div style={{ background: "#111019" }}>
         <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-bg/30 font-body">
             &copy; {new Date().getFullYear()} Young Dental Solutions. All rights reserved.
