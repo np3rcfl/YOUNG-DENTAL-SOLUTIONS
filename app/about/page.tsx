@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import { AnimatedContainer, AnimatedItem } from "@/components/AnimatedSection";
 import { HeroText, HeroTextItem, HeroImage } from "@/components/HomeAnimations";
+import StoryScrollCard from "@/components/StoryScrollCard";
 
 export const metadata: Metadata = {
   title: "About Arlene Young | Dental Practice Coach",
@@ -82,40 +83,39 @@ export default function AboutPage() {
       />
 
       {/* ─── HERO ─── */}
-      <section className="min-h-[85dvh] flex items-center pt-28 pb-20 bg-navy overflow-hidden">
+      <section
+        className="min-h-[85dvh] flex items-center pt-28 pb-20 overflow-hidden"
+        style={{ background: "linear-gradient(155deg, #FAFAF8 0%, #F0EAE0 55%, #EBE5D8 100%)" }}
+      >
         <div className="max-w-6xl mx-auto px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] gap-10 xl:gap-16 items-center">
             <HeroText>
               <HeroTextItem>
-                <nav className="text-xs text-bg/35 font-body tracking-wide">
-                  <Link href="/" className="hover:text-bg/60 transition-colors duration-300">
+                <nav className="text-xs text-navy/35 font-body tracking-wide">
+                  <Link href="/" className="hover:text-navy/60 transition-colors duration-300">
                     Home
                   </Link>
                   <span className="mx-2 opacity-40">/</span>
-                  <span className="text-bg/55">About</span>
+                  <span className="text-navy/55">About</span>
                 </nav>
               </HeroTextItem>
 
               <HeroTextItem>
-                <span className="eyebrow eyebrow-light">
+                <span className="eyebrow">
                   The Coach Behind Young Dental Solutions
                 </span>
               </HeroTextItem>
 
               <HeroTextItem>
-                <h1 className="font-display text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem] xl:text-[5.25rem] font-light text-bg leading-[0.98] tracking-[-0.02em]">
-                  30 Years.
+                <h1 className="font-display text-[3.25rem] md:text-[4.25rem] lg:text-[4.75rem] xl:text-[5.25rem] font-light text-navy leading-[0.98] tracking-[-0.02em]">
+                  The Consultant
                   <br className="hidden sm:block" />
-                  No Templates.
-                  <br className="hidden sm:block" />
-                  One Practice
-                  <br className="hidden sm:block" />
-                  at a Time.
+                  Who Stays.
                 </h1>
               </HeroTextItem>
 
               <HeroTextItem>
-                <p className="text-base md:text-lg text-bg/50 leading-relaxed font-body font-light max-w-lg">
+                <p className="text-base md:text-lg text-navy/55 leading-relaxed font-body font-light max-w-lg">
                   Arlene Young has spent more than three decades working
                   alongside dental practice owners across Southern California.
                   Not as a vendor. Not as a report writer. As a coach who stays
@@ -129,7 +129,7 @@ export default function AboutPage() {
               <div className="relative mt-6 lg:mt-0">
                 {/* Double-bezel photo frame */}
                 <div
-                  className="relative rounded-[2rem] p-2 bg-bg/5 border border-bg/10"
+                  className="relative rounded-[2rem] p-2 bg-navy/5 border border-navy/10"
                   style={{ transform: "rotate(-1.5deg)" }}
                 >
                   <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[3/4]">
@@ -165,7 +165,7 @@ export default function AboutPage() {
 
                 {/* Floating quote card */}
                 <div
-                  className="absolute bottom-8 -left-5 max-w-[200px] rounded-2xl bg-bg/95 backdrop-blur-sm border border-navy/8 shadow-2xl shadow-navy/15 px-4 py-4 space-y-1.5"
+                  className="hidden lg:block absolute bottom-8 -left-5 max-w-[200px] rounded-2xl bg-cream border border-navy/8 shadow-xl shadow-navy/10 px-4 py-4 space-y-1.5"
                   style={{ transform: "rotate(1.5deg)" }}
                 >
                   <p className="font-display text-navy text-sm font-medium italic leading-snug">
@@ -183,48 +183,51 @@ export default function AboutPage() {
 
       {/* ─── STORY ─── */}
       <section className="py-32 bg-cream">
-        <div className="max-w-3xl mx-auto px-6">
-          <AnimatedContainer>
-            <AnimatedItem>
-              <span className="eyebrow mb-8 inline-flex">Her Story</span>
-            </AnimatedItem>
-            <AnimatedItem>
-              <h2 className="font-display text-3xl lg:text-4xl font-light text-navy mb-10 leading-[1.1]">
-                A Finance Background That Changes
-                <br className="hidden sm:block" />
-                How You See Your Numbers
-              </h2>
-            </AnimatedItem>
-            <AnimatedItem className="space-y-6 text-navy/58 leading-relaxed font-body">
-              <p>
-                Most dental consultants come from clinical backgrounds. They
-                know dentistry. Arlene knows dentistry too, but her lens is
-                different. With roots in finance, she approaches every practice
-                the way a CFO approaches a portfolio: What are the real numbers?
-                Where is value being created? Where is it being destroyed?
-              </p>
-              <p>
-                That combination — deep dental industry experience plus financial
-                discipline — is rare. It means Arlene can sit down with your
-                production reports and see what a dentist-turned-consultant
-                might miss. Overhead ratios that look fine on the surface but
-                signal deeper problems. Scheduling patterns that cap your growth.
-                Billing systems that silently leak revenue month after month.
-              </p>
-              <p>
-                She started Young Dental Solutions because she saw a gap in how
-                consulting was being done: too much prescription, not enough
-                diagnosis. Too many playbooks designed for practices that
-                didn&rsquo;t look anything like yours. Too many consultants who
-                called once and disappeared.
-              </p>
-              <p>
-                Young Dental Solutions is built on the opposite model: listen
-                first, diagnose thoroughly, build a plan for this practice, and
-                stay accountable to it alongside you.
-              </p>
-            </AnimatedItem>
-          </AnimatedContainer>
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-[55%_40%] gap-16 xl:gap-20 items-start">
+            <AnimatedContainer>
+              <AnimatedItem>
+                <span className="eyebrow mb-8 inline-flex">Her Story</span>
+              </AnimatedItem>
+              <AnimatedItem>
+                <h2 className="font-display text-3xl lg:text-4xl font-light text-navy mb-10 leading-[1.1]">
+                  A Finance Background That Changes
+                  <br className="hidden sm:block" />
+                  How You See Your Numbers
+                </h2>
+              </AnimatedItem>
+              <AnimatedItem className="space-y-6 text-navy/58 leading-relaxed font-body">
+                <p>
+                  Most dental consultants come from clinical backgrounds. They
+                  know dentistry. Arlene knows dentistry too, but her lens is
+                  different. With roots in finance, she approaches every practice
+                  the way a CFO approaches a portfolio: What are the real numbers?
+                  Where is value being created? Where is it being destroyed?
+                </p>
+                <p>
+                  That combination — deep dental industry experience plus financial
+                  discipline — is rare. It means Arlene can sit down with your
+                  production reports and see what a dentist-turned-consultant
+                  might miss. Overhead ratios that look fine on the surface but
+                  signal deeper problems. Scheduling patterns that cap your growth.
+                  Billing systems that silently leak revenue month after month.
+                </p>
+                <p>
+                  She started Young Dental Solutions because she saw a gap in how
+                  consulting was being done: too much prescription, not enough
+                  diagnosis. Too many playbooks designed for practices that
+                  didn&rsquo;t look anything like yours. Too many consultants who
+                  called once and disappeared.
+                </p>
+                <p>
+                  Young Dental Solutions is built on the opposite model: listen
+                  first, diagnose thoroughly, build a plan for this practice, and
+                  stay accountable to it alongside you.
+                </p>
+              </AnimatedItem>
+            </AnimatedContainer>
+            <StoryScrollCard />
+          </div>
         </div>
       </section>
 
@@ -283,7 +286,7 @@ export default function AboutPage() {
                     </em>
                     &rdquo;
                   </blockquote>
-                  <p className="text-bg/35 font-body font-medium text-sm mt-8 tracking-wide">
+                  <p className="text-bg/45 font-body font-medium text-sm mt-8 tracking-wide">
                     Arlene Young &mdash; Young Dental Solutions
                   </p>
                 </div>

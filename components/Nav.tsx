@@ -46,6 +46,7 @@ function HamburgerIcon({ open }: { open: boolean }) {
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [hoveredHref, setHoveredHref] = useState<string | null>(null);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -93,12 +94,24 @@ export default function Nav() {
             />
           </Link>
 
-          <ul className="hidden md:flex items-center gap-7">
+          <ul className="hidden md:flex items-center gap-1">
             {links.map(({ href, label }) => (
-              <li key={href}>
+              <li
+                key={href}
+                className="relative"
+                onMouseEnter={() => setHoveredHref(href)}
+                onMouseLeave={() => setHoveredHref(null)}
+              >
+                {hoveredHref === href && (
+                  <motion.span
+                    layoutId="nav-pill"
+                    className="absolute inset-0 rounded-full bg-cream/15"
+                    transition={{ type: "spring", stiffness: 500, damping: 38, mass: 0.5 }}
+                  />
+                )}
                 <Link
                   href={href}
-                  className={`text-sm font-body font-medium transition-colors duration-300 ${
+                  className={`relative z-10 px-3 py-1.5 text-sm font-body font-medium transition-colors duration-300 ${
                     pathname === href
                       ? "text-[#FAFAF8]"
                       : "text-[#FAFAF8]/55 hover:text-[#FAFAF8]"

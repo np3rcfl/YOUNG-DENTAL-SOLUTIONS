@@ -157,9 +157,19 @@ export default function HomePage() {
 
       {/* ─── HERO ─── */}
       <section
-        className="min-h-[100dvh] flex items-center pt-24 pb-14 overflow-hidden"
+        className="relative min-h-[100dvh] flex items-center pt-24 pb-14 overflow-hidden"
         style={{ background: "radial-gradient(ellipse at 75% 15%, #0E1C10 0%, #151210 45%, #0A0D0A 100%)" }}
       >
+        <svg
+          className="absolute inset-0 w-full h-full silk-texture pointer-events-none"
+          aria-hidden="true"
+        >
+          <filter id="silk-noise">
+            <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+            <feColorMatrix type="saturate" values="0" />
+          </filter>
+          <rect width="100%" height="100%" filter="url(#silk-noise)" opacity="0.04" fill="#1F5C38" />
+        </svg>
         <div className="max-w-[1200px] mx-auto px-6 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-[56%_44%] gap-8 xl:gap-14 items-center">
 
@@ -215,15 +225,15 @@ export default function HomePage() {
                 <div className="pt-5 border-t border-bg/10">
                   <div className="flex gap-8">
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-bg/35 font-body">Production efficiency</p>
+                      <p className="text-[10px] uppercase tracking-widest text-bg/45 font-body">Production efficiency</p>
                       <p className="text-sm font-medium text-bg/70 font-body tabular-nums mt-0.5">measured</p>
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-bg/35 font-body">Overhead ratio</p>
+                      <p className="text-[10px] uppercase tracking-widest text-bg/45 font-body">Overhead ratio</p>
                       <p className="text-sm font-medium text-bg/70 font-body tabular-nums mt-0.5">benchmarked</p>
                     </div>
                     <div>
-                      <p className="text-[10px] uppercase tracking-widest text-bg/35 font-body">Staff retention</p>
+                      <p className="text-[10px] uppercase tracking-widest text-bg/45 font-body">Staff retention</p>
                       <p className="text-sm font-medium text-bg/70 font-body tabular-nums mt-0.5">tracked</p>
                     </div>
                   </div>
@@ -302,7 +312,7 @@ export default function HomePage() {
                   I stay until the practice actually changes.&rdquo;
                 </p>
                 <footer className="mt-8">
-                  <p className="font-body text-sm text-bg/35 tracking-wide">
+                  <p className="font-body text-sm text-bg/45 tracking-wide">
                     &mdash; Arlene Young, Young Dental Solutions
                   </p>
                 </footer>
@@ -313,7 +323,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── ABOUT PREVIEW ─── */}
-      <section className="py-32" style={{ background: "linear-gradient(155deg, #FAFAF8 0%, #F0EAE0 55%, #EBE5D8 100%)" }}>
+      <section className="py-24" style={{ background: "linear-gradient(155deg, #FAFAF8 0%, #F0EAE0 55%, #EBE5D8 100%)" }}>
         <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <AnimatedContainer>
             <AnimatedItem className="space-y-7">
@@ -544,7 +554,7 @@ export default function HomePage() {
       </section>
 
       {/* ─── COUNTER-POSITIONING ─── */}
-      <section className="py-32 relative overflow-hidden" style={{ background: "linear-gradient(160deg, #FAFAF8 0%, #F2EDE4 100%)" }}>
+      <section className="py-20 relative overflow-hidden" style={{ background: "linear-gradient(160deg, #FAFAF8 0%, #F2EDE4 100%)" }}>
         <span className="absolute -top-8 -right-4 font-display font-light text-navy/5 select-none pointer-events-none leading-none" aria-hidden="true" style={{ fontSize: "14rem" }}>02</span>
         <div className="max-w-6xl mx-auto px-6">
           <AnimatedContainer className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">

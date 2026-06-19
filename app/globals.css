@@ -63,3 +63,13 @@
     color: color-mix(in srgb, #FAFAF8 55%, transparent);
   }
 }
+
+@keyframes silk-drift {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(-14px, 9px); }
+  100% { transform: translate(0, 0); }
+}
+
+.silk-texture {
+  animation: silk-drift 20s ease-in-out infinite;
+}
