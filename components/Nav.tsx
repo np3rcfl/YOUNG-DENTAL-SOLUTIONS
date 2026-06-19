@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -80,9 +81,20 @@ export default function Nav() {
         >
           <Link
             href="/"
-            className="font-display text-[#FDFCF7] font-semibold text-lg tracking-tight hover:text-[#FDFCF7]/80 transition-colors duration-300"
+            className="flex items-center gap-2.5 hover:opacity-85 transition-opacity duration-300"
           >
-            Young Dental Solutions
+            <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#FDFCF7]/20 shrink-0">
+              <Image
+                src="/images/arlene-young.png"
+                alt="Arlene Young"
+                fill
+                className="object-cover object-top"
+                sizes="32px"
+              />
+            </div>
+            <span className="font-display text-[#FDFCF7] font-semibold text-lg tracking-tight">
+              Young Dental Solutions
+            </span>
           </Link>
 
           <ul className="hidden md:flex items-center gap-7">
@@ -129,11 +141,19 @@ export default function Nav() {
             className="fixed inset-0 z-[60] bg-[#1A1A26]/97 backdrop-blur-3xl flex flex-col"
           >
             <div className="flex items-center justify-between px-6 py-5 mt-1">
-              <Link
-                href="/"
-                className="font-display text-[#FDFCF7] font-semibold text-lg"
-              >
-                Young Dental Solutions
+              <Link href="/" className="flex items-center gap-2.5">
+                <div className="relative w-8 h-8 rounded-full overflow-hidden border border-[#FDFCF7]/20 shrink-0">
+                  <Image
+                    src="/images/arlene-young.png"
+                    alt="Arlene Young"
+                    fill
+                    className="object-cover object-top"
+                    sizes="32px"
+                  />
+                </div>
+                <span className="font-display text-[#FDFCF7] font-semibold text-lg">
+                  Young Dental Solutions
+                </span>
               </Link>
               <button
                 onClick={() => setOpen(false)}

@@ -234,7 +234,7 @@ export default function HomePage() {
                 >
                   <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[3/4]">
                     <Image
-                      src="/images/arlene-young.jpg"
+                      src="/images/arlene-young.png"
                       alt="Arlene Young, Dental Practice Consultant serving San Diego and Southern California"
                       fill
                       className="object-cover object-top"
@@ -405,7 +405,7 @@ export default function HomePage() {
               >
                 <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden h-full min-h-[384px]">
                   <Image
-                    src="/images/service-strategizing.jpg"
+                    src="/images/service-practice-management.jpeg"
                     alt="Dental practice management consulting"
                     fill
                     className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"
@@ -511,7 +511,7 @@ export default function HomePage() {
               >
                 <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden h-full min-h-[384px]">
                   <Image
-                    src="/images/service-planning.jpg"
+                    src="/images/service-recruiting.jpg"
                     alt="Dental practice team building and recruiting"
                     fill
                     className="object-cover transition-transform duration-700 ease-[cubic-bezier(0.32,0.72,0,1)] group-hover:scale-105"

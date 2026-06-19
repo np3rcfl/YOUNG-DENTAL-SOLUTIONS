@@ -136,7 +136,7 @@ export default function AboutPage() {
                 >
                   <div className="relative rounded-[calc(2rem-0.5rem)] overflow-hidden aspect-[3/4]">
                     <Image
-                      src="/images/arlene-young.jpg"
+                      src="/images/arlene-young.png"
                       alt="Arlene Young, Dental Practice Consultant and Coach, Southern California"
                       fill
                       className="object-cover object-top"

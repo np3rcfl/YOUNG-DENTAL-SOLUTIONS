@@ -131,7 +131,7 @@ export default function PracticeManagementPage() {
               <div className="relative rounded-2xl overflow-hidden border border-bg/10 p-1.5">
                 <div className="relative rounded-xl overflow-hidden aspect-square">
                   <Image
-                    src="/images/practice-management.jpg"
+                    src="/images/service-practice-management.jpeg"
                     alt="Dental practice management consultation, Young Dental Solutions San Diego"
                     fill
                     className="object-cover"

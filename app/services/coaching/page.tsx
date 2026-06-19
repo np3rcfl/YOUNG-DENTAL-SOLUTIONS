@@ -136,7 +136,7 @@ export default function CoachingPage() {
               <div className="relative rounded-2xl overflow-hidden border border-bg/10 p-1.5">
                 <div className="relative rounded-xl overflow-hidden aspect-[4/5]">
                   <Image
-                    src="/images/coaching.jpg"
+                    src="/images/service-workspace.jpg"
                     alt="Dental practice coaching, 1-on-1 sessions with Arlene Young, Southern California"
                     fill
                     className="object-cover"
